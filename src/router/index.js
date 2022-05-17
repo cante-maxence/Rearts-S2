@@ -1,21 +1,29 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import Td01View from '../views/Td01View.vue'
-import Tp01View from '../views/Tp01View.vue'
-import Td02View from '../views/Td02View.vue'
-import Tp02View from '../views/Tp02View.vue'
-import Td03View from '../views/Td03View.vue'
+import Apropos from '../views/Apropos.vue'
+import compteArtist from '../views/compteArtiste.vue'
+import Dons from '../views/Dons.vue'
+import FAQ from '../views/FAQ.vue'
+import Inscription from '../views/Inscription.vue'
+import Messagerie from '../views/Messagerie.vue'
+import MLegal from '../views/MLegal.vue'
+import NosArtistes from '../views/NosArtistes.vue'
+import PageArtiste from '../views/PageArtiste.vue'
+
 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'HomeView', component: HomeView },
-    { path: '/td01', name: 'Td01View', component: Td01View },
-    { path: '/tp01', name: 'Tp01View', component: Tp01View },
-    { path: '/td02', name: 'Td02View', component: Td02View },
-    { path: '/tp02', name: 'Tp02View', component: Tp02View },
-    { path: '/td03', name: 'Td03View', component: Td03View },
+    { path: '/Apropos', name: 'Apropos', component: Apropos },
+    { path: '/compteArtiste', name: 'compteArtiste', component: compteArtiste },
+    { path: '/Dons', name: 'Dons', component: Dons },
+    { path: '/FAQ', name: 'FAQ', component: FAQ },
+    { path: '/Inscription', name: 'Inscription', component: Inscription },
+    { path: '/Messagerie', name: 'Messagerie', component: Messagerie },
+    { path: '/MLegal', name: 'MLegal', component: MLegal },
+    { path: '/NosArtistes', name: 'NosArtistes', component: NosArtistes },
+    { path: '/PageArtiste', name: 'PageArtiste', component: PageArtiste },
   ]
 })
 

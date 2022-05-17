@@ -132,11 +132,15 @@ import HelloWorld from "@/components/HelloWorld.vue";
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Accueil</RouterLink>
-        <RouterLink to="/td01">Td01</RouterLink>
-        <RouterLink to="/tp01">Tp01</RouterLink>
-        <RouterLink to="/td02">Td02</RouterLink>
-        <RouterLink to="/tp02">Tp02</RouterLink>
-        <RouterLink to="/td03">Td03</RouterLink>
+        <RouterLink to="/Apropos">A propos</RouterLink>
+        <RouterLink to="/compteArtiste">Votre Compte</RouterLink>
+        <RouterLink to="/Dons">Dons</RouterLink>
+        <RouterLink to="/FAQ">FAQ</RouterLink>
+        <RouterLink to="/Inscription">Inscription</RouterLink>
+        <RouterLink to="/Messagerie">Messagerie</RouterLink>
+        <RouterLink to="/MLegal">Mentions légales</RouterLink>
+        <RouterLink to="/NosArtistes">Les Artistes</RouterLink>
+        <RouterLink to="/PageArtiste">Page de l'artiste</RouterLink>
       </nav>
     </div>
   </header>
