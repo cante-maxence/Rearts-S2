@@ -2,10 +2,9 @@
 
 </template>
 
-<script setup>
+<script>
 
 import { RouterLink, RouterView } from "vue-router";
-import HelloWorld from "@/components/HelloWorld.vue";
 import card from "./components/card.vue";
 import Bouton from "./components/bouton.vue";
 import Menu from "./components/icones/menu.vue"
