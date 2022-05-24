@@ -1,5 +1,5 @@
 {
-  "name": "projettd",
+  "name": "td-grp-c",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -7,12 +7,14 @@
     "preview": "vite preview --port 5050"
   },
   "dependencies": {
-    "axios": "^0.26.1",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.14"
+    "@heroicons/vue": "^1.0.6",
+    "vue": "^3.2.31"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
+    "autoprefixer": "^10.4.4",
+    "postcss": "^8.4.12",
+    "tailwindcss": "^3.0.23",
     "vite": "^2.9.1"
   }
 }
