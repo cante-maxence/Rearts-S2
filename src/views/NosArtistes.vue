@@ -207,9 +207,9 @@
 
 <script >
 
-import card from "./components/card.vue";
-import Bouton from "./components/icones/bouton.vue";
-import Menu from "./components/icones/menu.vue"
+import card from "../components/card.vue";
+import Bouton from "../components/icones/bouton.vue";
+import Menu from "../components/icones/menu.vue"
 
 import {  } from "@heroicons/vue/outline";
 export default {
