@@ -9,8 +9,8 @@ module.exports = {
         "black-primary": "#0f0e0e",
         "blanc-primary": "#f4f1f1",
         "Gris_Clair": "#dbdbdb",
-        "rouge-primary": "#a40b0b",
-        "star-color": "#dbde4c",
+        "Rouge": "#a40b0b",
+        "star-color": "#dbde4c"
       },
       "fontSize": {
         "sm": "0.625rem",
@@ -33,7 +33,7 @@ module.exports = {
         "3xl": "0.9375rem",
         "4xl": "1.25rem"
       }
-    },
+    }
   },
 
   plugins: [],
