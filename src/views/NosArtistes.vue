@@ -208,10 +208,10 @@
 <script >
 
 import card from "./components/card.vue";
-import Bouton from "./components/bouton.vue";
+import Bouton from "./components/icones/bouton.vue";
 import Menu from "./components/icones/menu.vue"
 
-import { MenuIcon, } from "@heroicons/vue/outline";
+import {  } from "@heroicons/vue/outline";
 export default {
   name: "App",
   components: { card, Bouton, Menu },
