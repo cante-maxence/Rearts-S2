@@ -21,6 +21,10 @@
   </header>
 
   <main class="m-5">
+
+    <p>
+      bgnfd
+    </p>
     <Bouton>
       <slot>Faire un don</slot>
     </Bouton>
