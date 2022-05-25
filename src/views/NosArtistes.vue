@@ -1,28 +1,7 @@
 <template>
-  <header class="flex items-center bg-black-primary">
-    <img class="w-24 h-auto" src="/images-icones/Logoblanc.svg" alt="">
-    
-    <!-- menu -->
-    <nav>
-        <div  class="w-max "><Menu class="h-12 w-auto mr-1 inline-block fill-blanc-primary"/>
-       
-        <RouterLink to="/">Accueil</RouterLink>
-        <RouterLink to="/Apropos">A propos</RouterLink>
-        <RouterLink to="/compteArtiste">Votre Compte</RouterLink>
-        <RouterLink to="/Dons">Dons</RouterLink>
-        <RouterLink to="/FAQ">FAQ</RouterLink>
-        <RouterLink to="/Inscription">Inscription</RouterLink>
-        <RouterLink to="/Messagerie">Messagerie</RouterLink>
-        <RouterLink to="/MLegal">Mentions légales</RouterLink>
-        <RouterLink to="/NosArtistes">Les Artistes</RouterLink>
-        <RouterLink to="/PageArtiste">Page de l'artiste</RouterLink>
-       </div>
-    </nav>
-  </header>
-
   <main class="m-5">
 
-    <h3>Nos artistes !</h3>
+    <h2>Nos artistes !</h2>
 
     <section>
       <div class="">
@@ -174,9 +153,6 @@
 
   </main>
 
-  <footer>
-
-  </footer>
 </template>
 
 <script >
