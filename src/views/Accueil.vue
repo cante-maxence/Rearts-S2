@@ -1,8 +1,4 @@
 <template>
-      <header>
-
-      </header>
-      
       
       <main class="m-5">
 
@@ -25,34 +21,23 @@
               note="4.2"
               />
       </div>
-      
-
-      
     </section>
 
   </main>
-
-        <Footer>
-        
-      </Footer>
 
 </template>
 
 <script>
 
-import { RouterLink, RouterView } from "vue-router";
-import card from "./components/card.vue";
-import Bouton from "./components/icones/bouton.vue";
-import Menu from "./components/icones/menu.vue"
-import Footer from "./components/footer.vue"
-import Profil from "./components/icones/profil.vue";
+import card from "/src/components/card.vue";
+import Bouton from "/src/components/icones/bouton.vue";
+import Menu from "/src/components/icones/menu.vue"
+import Profil from "/src/components/icones/profil.vue";
 
 import {  } from "@heroicons/vue/outline";
-import Header from '../components/header.vue';
 
 export default {
   name: "App",
-  components: { card, Bouton, Menu, Profil, FooterHeader },
+  components: { card, Bouton, Menu, Profil, },
 };
 </script>
-</template>
