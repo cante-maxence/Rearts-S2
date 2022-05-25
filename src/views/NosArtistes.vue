@@ -21,34 +21,8 @@
   </header>
 
   <main class="m-5">
-    <Bouton>
-      <slot>Faire un don</slot>
-    </Bouton>
-    <Bouton>
-      <slot>S'inscrire</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Voir plus</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Acheter</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Offrir l'offre</slot>
-    </Bouton>
 
-    <Bouton>
-      <slot>Contacter</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Visiter</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Découvrir</slot>
-    </Bouton>
-    <Bouton>
-      <slot>Me contacter !</slot>
-    </Bouton>
+    <h3>Nos artistes !</h3>
 
     <section>
       <div class="">
