@@ -10,21 +10,23 @@
         <div  class="w-max ">
           <Menu class="h-12 w-auto mr-1 inline-block fill-blanc-primary"/>
           <div class="text-blanc-primary">
-            <RouterLink to="/">Accueil</RouterLink>
-            <RouterLink to="/Apropos">A propos</RouterLink>
-            <RouterLink to="/compteArtiste">Votre Compte</RouterLink>
-            <RouterLink to="/Dons">Dons</RouterLink>
-            <RouterLink to="/FAQ">FAQ</RouterLink>
-            <RouterLink to="/Inscription">Inscription</RouterLink>
-            <RouterLink to="/Messagerie">Messagerie</RouterLink>
-            <RouterLink to="/MLegal">Mentions légales</RouterLink>
-            <RouterLink to="/NosArtistes">Nos Artistes</RouterLink>
-            <RouterLink to="/PageArtiste">Page de l'artiste</RouterLink>
+            <router-link to="/">Accueil</router-link>
+            <router-link to="/Apropos">A propos</router-link>
+            <router-link to="/compteArtiste">Votre Compte</router-link>
+            <router-link to="/Dons">Dons</router-link>
+            <router-link to="/FAQ">FAQ</router-link>
+            <router-link to="/Inscription">Inscription</router-link>
+            <router-link to="/Messagerie">Messagerie</router-link>
+            <router-link to="/MLegal">Mentions légales</router-link>
+            <router-link to="/NosArtistes">Nos Artistes</router-link>
             </div>
        </div>
     </nav>
     
   </header>
+
+  <router-view></router-view>
+
   <footer>
     <section class="bg-black-primary text-blanc-primary ">
       <div class="flex items-center">
@@ -56,7 +58,15 @@ import {  } from "@heroicons/vue/outline";
 
 export default {
   name: "App",
-  components: { Facebook, Instagram, Bouton, Menu, Profil },
+  components: { 
+    RouterLink,
+    RouterView,
+    Facebook, 
+    Instagram, 
+    Bouton,
+    Menu,
+    Profil
+  },
 };
 
 </script>

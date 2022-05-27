@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "imagep": "/profil-artistes/PDNerly.jpg",
+        "name": "DNerly",
+        "image": "/images-artistes/DNerly.jpg",
+        "text": "Je vous fait des dessins dans le style BD des années 80 !",
+        "price": "10€50",
+        "like": true,
+        "note": "4.2",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 10.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "imagep": "/profil-artistes/PDNerly.jpg",
+        "name": "Rose menegain",
+        "image": "/images-artistes/DNerly.jpg",
+        "text": "Je vous fait des dessins dans le style BD des années 80 !",
+        "price": "10€50",
+        "like": true,
+        "note": "4.2",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    }
+]

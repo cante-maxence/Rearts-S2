@@ -4,6 +4,7 @@
 
 <script>
 export default {
-  name: 'MaterialSymbolsStar'
+  name: 'MaterialSymbolsStar',
+
 }
 </script>

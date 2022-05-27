@@ -24,7 +24,7 @@ const router = createRouter({
     { path: '/Messagerie', name: 'Messagerie', component: Messagerie },
     { path: '/MLegal', name: 'MLegal', component: MLegal },
     { path: '/NosArtistes', name: 'NosArtistes', component: NosArtistes },
-    { path: '/PageArtiste', name: 'PageArtiste', component: PageArtiste },
+    { path: '/artistes/:id', name: 'PageArtiste', component: PageArtiste },
   ]
 })
 
