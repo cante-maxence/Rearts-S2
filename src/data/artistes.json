@@ -12,6 +12,84 @@
             {
                 "name": "Basic",
                 "price": 10.50,
+                "intro": "Envoie dans la conversation ou par mail.",
+                "list": [
+                    "1 page de BD"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 17.99,
+                "intro": "Envoie dans la conversation ou par mail.",
+                "list": [
+                    "1 page de BD",
+                    "Détails améliorés"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 28.79,
+                "intro": "Envoie dans la conversation ou par mail et/ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "imagep": "/profil-artistes/PBbFrye.jpg",
+        "name": "BbFrye",
+        "image": "/images-artistes/BbFrye.jpg",
+        "text": "Vous souhaitez un dessin 3D ? Je suis là pour vous satisfaire !",
+        "price": "35€",
+        "like": true,
+        "note": "4.8",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 35,
+                "intro": "Envoie par mail",
+                "list": [
+                    "Model 3D"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 68,
+                "intro": "Envoie seulement numérique mais plateformes au choix.",
+                "list": [
+                    "Model 3D",
+                    "Animation de 3 secondes"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 86,
+                "intro": "Envoie seulement numérique mais plateformes au choix.",
+                "list": [
+                    "Model 3D",
+                    "Animation de 8 secondes",
+                    "Vidéo du procésus de création"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "imagep": "/profil-artistes/PAuster.jpg",
+        "name": "Auster",
+        "image": "/images-artistes/Auster.jpg",
+        "text": "Des illustrations qui ferons vivre les personnages de vos enfants.",
+        "price": "22€",
+        "like": true,
+        "note": "3.4",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
                 "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
                 "list": [
                     "2 pages de BD",
@@ -38,14 +116,318 @@
         ]
     },
     {
-        "id": 2,
-        "imagep": "/profil-artistes/PDNerly.jpg",
-        "name": "Rose menegain",
-        "image": "/images-artistes/DNerly.jpg",
-        "text": "Je vous fait des dessins dans le style BD des années 80 !",
-        "price": "10€50",
+        "id": 4,
+        "imagep": "/profil-artistes/PBeerdo.jpg",
+        "name": "Beerdor",
+        "image": "/images-artistes/Beerdo.jpg",
+        "text": "Un style simpliste qui reste similaire au dessin original de votre enfant.",
+        "price": "8€",
+        "like": true,
+        "note": "4.8",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "imagep": "/profil-artistes/PChillit.jpg",
+        "name": "Chillit",
+        "image": "/images-artistes/Chillit.jpg",
+        "text": "Un style très coloré, qui sort du commun.",
+        "price": "25€",
         "like": true,
         "note": "4.2",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "imagep": "/profil-artistes/PDevmind.jpg",
+        "name": "Devmind",
+        "image": "/images-artistes/Devmind.jpg",
+        "text": "Des desings qui donne vie a vos dessins !",
+        "price": "22€",
+        "like": true,
+        "note": "3.5",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "imagep": "/profil-artistes/PFreshStar.jpg",
+        "name": "FreshStar",
+        "image": "/images-artistes/FreshStar.jpg",
+        "text": "Des Illustrations dans mon style, rendra vos enfants plus qu’heureux.",
+        "price": "25€",
+        "like": true,
+        "note": "4.2",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "imagep": "/profil-artistes/PFustish.jpg",
+        "name": "Fustish",
+        "image": "/images-artistes/Fustish.jpg",
+        "text": "La nourriture préféré de vos enfant dans un style mignon !",
+        "price": "20€",
+        "like": true,
+        "note": "2.5",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "imagep": "/profil-artistes/PMalinalli.jpg",
+        "name": "Malinalli",
+        "image": "/images-artistes/Malinalli.jpg",
+        "text": "Je fais vivres les personnages que vos enfants ont créé.",
+        "price": "15€",
+        "like": true,
+        "note": "3.4",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "imagep": "/profil-artistes/POlemer.jpg",
+        "name": "Olemer",
+        "image": "/images-artistes/Olemer.jpg",
+        "text": "Dessin papier scané, ou envoie physique !",
+        "price": "12€50",
+        "like": true,
+        "note": "4.1",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "imagep": "/profil-artistes/PPulsh.jpg",
+        "name": "Pulsh",
+        "image": "/images-artistes/Pulsh.jpg",
+        "text": "Je fais des petits monstres mignons que vos enfants ont imaginez !",
+        "price": "15€",
+        "like": true,
+        "note": "4.2",
+        "prices": [
+            {
+                "name": "Basic",
+                "price": 30.50,
+                "intro": "Envoie dans la conversation par mail ou envoie physique dans une enveloppe.",
+                "list": [
+                    "2 pages de BD",
+                    "Détails améliorés",
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Standard",
+                "price": 10.50,
+                "intro": "Coucou rose",
+                "list": [
+                    "Envoie physique et/ou numérique"
+                ]
+            },
+            {
+                "name": "Premium",
+                "price": 10.50,
+                "intro": "Voilà c'est trop cool",
+                "list": [
+                    "Détails améliorés"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "imagep": "/profil-artistes/PRaceCars.jpg",
+        "name": "RaceCars",
+        "image": "/images-artistes/RaceCars.jpg",
+        "text": "Des illustrations qui donnes vie les voitures.",
+        "price": "31€",
+        "like": true,
+        "note": "2.8",
         "prices": [
             {
                 "name": "Basic",

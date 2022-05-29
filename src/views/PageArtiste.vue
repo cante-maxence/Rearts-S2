@@ -1,12 +1,12 @@
 <template>
-    <div class="flex items-center">
+    <div class="flex items-center m-5">
         <img class="w-150px h-auto object-cover " :src="artist.imagep" alt="" />
         <h3 class="m-4 font-comfortaa font-bold text-lg">
             {{ artist.name }}
         </h3>
     </div>
 
-    <p class="">
+    <p class="px-6 pb-5">
         {{ artist.text }}
     </p>
 
@@ -32,12 +32,23 @@
             </div>
         </div>
     </div>
+    <div class="flex justify-center">
+        <Bouton>
+        <slot>Contacter</slot>
+        </Bouton>
+    </div>
 </template>
 
 <script>
 import ArtistsData from '../data/artistes.json';
+import Bouton from '../components/icones/bouton.vue'
 
 export default {
+
+        components: { 
+            Bouton,
+        },
+
     data: function() {
         const id = this.$route.params.id;
         const artist = ArtistsData.find((a) => a.id == id);
