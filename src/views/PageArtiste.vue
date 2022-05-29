@@ -1,16 +1,16 @@
 <template>
-    <div class="flex items-center m-5">
+    <div class="flex items-center my-3">
         <img class="w-150px h-auto object-cover " :src="artist.imagep" alt="" />
         <h3 class="m-4 font-comfortaa font-bold text-lg">
             {{ artist.name }}
         </h3>
     </div>
 
-    <p class="px-6 pb-5">
+    <p class=" pb-5">
         {{ artist.text }}
     </p>
 
-    <div class="px-6" v-if="artist.prices">
+    <div class="" v-if="artist.prices">
         <div 
             v-for="(p, index) in artist.prices" :key="index"
             @click="open = index"

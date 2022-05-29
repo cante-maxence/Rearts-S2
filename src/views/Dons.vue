@@ -1,6 +1,6 @@
 <template>
     <main>
-        <h2>Faites un *don !</h2>
+        <h2 class="font-raleway font-normal text-xl">Faites un *don !</h2>
     </main>
 </template>
 

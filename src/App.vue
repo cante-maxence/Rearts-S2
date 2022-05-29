@@ -25,7 +25,11 @@
     
   </header>
 
+
+  <main class="px-6 py-6">
   <router-view></router-view>
+  </main>
+
 
   <footer>
     <section class="bg-black-primary text-blanc-primary ">
