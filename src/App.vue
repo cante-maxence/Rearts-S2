@@ -1,12 +1,12 @@
 <template>
   <header class="bg-black-primary flex justify-between">
     <RouterLink to="/">
-      <img class="w-24 h-auto" src="/images-icones/Logoblanc.svg" alt="Logo du site">
+      <img class="w-24 h-auto mt-1 -mb-2" src="/images-icones/Logoblanc.svg" alt="Logo du site">
     </RouterLink>
 
     <section>
       <div  class="w-max ">
-        <Profil class="h-12 w-auto mr-1 inline-block fill-blanc-primary"/> 
+        <Profil class="h-12 w-auto mr-2 inline-block fill-blanc-primary"/> 
       </div>
       
     <div>
