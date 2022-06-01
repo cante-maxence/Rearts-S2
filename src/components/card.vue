@@ -1,9 +1,9 @@
 <template>
-    <div class="m-11 p-5 border-2 border-Gris_Clair">
+    <div class="m-11 p-4 h-[465px] w-80 border-2 border-Gris_Clair">
         <router-link :to="link">
             <div>
                 <figure class="flex items-center">
-                    <img class="w-150px h-auto object-cover " :src="imagep" alt="" />
+                    <img class="w-[40px] h-auto object-cover " :src="imagep" alt="" />
                     <figcaption>
                         <h3 class="m-4 font-comfortaa font-bold text-lg">{{ name }}</h3>
                     </figcaption>
@@ -11,7 +11,7 @@
             </div>
             
             <figure>
-                <img class="flex m-auto w-150px h-auto my-5" :src="image" alt="" />
+                <img class="flex m-auto w-[200px] h-auto my-5" :src="image" alt="" />
                 <figcaption>
                     <p class="my-4 text-base font-comfortaa font-medium text-center text-black-primary">
                         {{ text }}

@@ -3,7 +3,7 @@
 
     <h2 class="font-raleway font-normal text-xl">Nos artistes !</h2>
 
-    <section>
+    <section class="flex-col object-center items-center grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
             <article v-for="artist in artists" :key="artist.id">
                 <card 
                     :imagep="artist.imagep"

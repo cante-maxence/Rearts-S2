@@ -9,7 +9,7 @@ import Messagerie from '../views/Messagerie.vue'
 import MLegal from '../views/MLegal.vue'
 import NosArtistes from '../views/NosArtistes.vue'
 import PageArtiste from '../views/PageArtiste.vue'
-
+import PageNotFound from '../views/PageNotFound.vue'
 
 
 const router = createRouter({
@@ -25,6 +25,7 @@ const router = createRouter({
     { path: '/MLegal', name: 'MLegal', component: MLegal },
     { path: '/NosArtistes', name: 'NosArtistes', component: NosArtistes },
     { path: '/artistes/:id', name: 'PageArtiste', component: PageArtiste },
+    { path: '/PageNotFound', name: 'PageNotFound', component: PageNotFound },
   ]
 })
 

@@ -3,7 +3,7 @@
     <RouterLink to="/">
       <img class="w-24 h-auto" src="/images-icones/Logoblanc.svg" alt="Logo du site">
     </RouterLink>
-    
+
     <section>
       <div  class="w-max ">
         <Profil class="h-12 w-auto mr-1 inline-block fill-blanc-primary"/> 
@@ -68,25 +68,36 @@
   </main>
 
 
-  <footer>
-    <section class="bg-black-primary text-blanc-primary">
+  <footer v-if="!['PageNotFound'].includes($route.name)">
+    <section class="flex flex-col items-center text-center bg-HeadFoot text-PrincipalyText pt-4 pb-8 bg-black-primary text-blanc-primary">
       <div class="flex items-center">
-        <img class="w-28 h-auto" src="/images-icones/Logoblanc.svg" alt="">
+        <img class="w-28 h-auto my-2 -mx-6" src="/images-icones/Logoblanc.svg" alt="">
         <h3 class="font-comfortaa font-normal text-xl">éarts</h3>
       </div>
-        <p class="font-comfortaa font-normal text-lg">Nous rejoindre</p>
+        <span class="font-comfortaa font-normal text-lg ">Nous rejoindre</span>
       <div>
-        <Facebook class="fill-blanc-primary inline-block"></Facebook>
-        <Instagram class="fill-blanc-primary inline-block"></Instagram>
+        <Facebook class="fill-blanc-primary inline-block m-3 mx-5"></Facebook>
+        <Instagram class="fill-blanc-primary inline-block m-3 mx-5"></Instagram>
       </div>
-        <Bouton>
-        <slot>S'inscrire</slot>
+        <Bouton class=" m-3">
+          <RouterLink to="/Inscription" class=" m-3">
+          <slot>S'inscrire</slot>
+            </RouterLink>
+
         </Bouton>
-        <a href="./Mlegal.vue" class="font-comfortaa font-normal text-lg">Mentions légales</a>
-        <div class="inline-block">
-        <a href="./views/FAQ.vue" class="font-comfortaa font-normal text-lg">FAQ</a>
-        <a href="./views/Dons.vue" class="font-comfortaa font-normal text-lg">DONS</a>
-        </div>
+
+        <RouterLink to="/Mlegal" class=" m-3">
+          <span>Mentions légales</span>
+        </RouterLink>
+      <div class="inline-block">
+        <RouterLink to="/FAQ" class=" m-3 inline-block">
+          <span>FAQ</span>
+        </RouterLink>
+        <span class=" m-3 inline-block">|</span>
+        <RouterLink to="/Dons" class=" m-3 inline-block ">
+          <span>DONS</span>
+        </RouterLink>
+      </div>
 
     </section>
   </footer>

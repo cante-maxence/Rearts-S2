@@ -6,7 +6,7 @@
             Conditions générales d'utilisation
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             En vigueur au 12/04/2022 <br>
 
             Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique
@@ -28,7 +28,7 @@
             Article 1 : Les mentions légales
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             L'édition du site https://rearts.fr est assurée par la Société SAS Réarts au capital de 20000 euros,
             immatriculée au RCS de Montbéliard sous le numéro 645482334, 
             dont le siège social est situé au 4 Place Tharradin 25200 Montbéliard. <br>
@@ -43,7 +43,7 @@
             ARTICLE 2 : Accès au site
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             Le site https://rearts.fr permet à l'Utilisateur un accès gratuit aux services suivants : <br>
                 Le site internet propose les services suivants : <br>
                 <ul class="mx-5">
@@ -73,7 +73,7 @@
             ARTICLE 3 : Collecte des données
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             Le site assure à l'Utilisateur une collecte et un traitement d'informations personnelles dans le respect de la vie privée conformément à la loi n°78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés. <br>
             Le site est déclaré à la CNIL sous le numéro 3554784356489. <br>
 
@@ -87,7 +87,7 @@
             ARTICLE 4 : Propriété intellectuelle
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
             Les marques, logos, signes ainsi que tous les contenus du site (textes, images, son...) font l'objet d'une protection par le Code de la propriété intellectuelle et plus particulièrement par le droit d'auteur. <br>
 
@@ -107,7 +107,7 @@
             ARTICLE 5 : Responsabilité
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
             Les sources des informations diffusées sur le site https://rearts.fr sont réputées fiables mais le site ne garantit pas qu’il soit exempt de défauts, d’erreurs ou d’omissions. <br>
 
@@ -126,7 +126,7 @@
             ARTICLE 6 : Liens hypertextes
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
            Des liens hypertextes peuvent être présents sur le site. <br>
             L’Utilisateur est informé qu’en cliquant sur ces liens, il sortira du site https://rearts.fr. <br>
@@ -137,7 +137,7 @@
             ARTICLE 7 : Cookies
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
            L’Utilisateur est informé que lors de ses visites sur le site, un cookie peut s’installer automatiquement sur son logiciel de navigation. <br>
             Les cookies sont de petits fichiers stockés temporairement sur le disque dur de l’ordinateur de l’Utilisateur par votre navigateur et qui sont nécessaires à l’utilisation du site https://rearts.fr. <br>
@@ -154,7 +154,7 @@
             ARTICLE 8 : Publication par l’Utilisateur
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
            Le site permet aux membres de publier les contenus suivants : <br>
            Dessins, œuvres. <br>
@@ -180,7 +180,7 @@
             ARTICLE 9 : Droit applicable et juridiction compétentez
         </h3>
 
-        <p class="font-comfortaa font-normal text-base">
+        <p>
             
            La législation française s'applique au présent contrat. <br> 
             En cas d'absence de résolution amiable d'un litige né entre les parties, les tribunaux français seront seuls compétents pour en connaître. <br>
@@ -189,7 +189,7 @@
             coordonnées inscrites à l’ARTICLE 1. <br>
         </p>
         
-        <p class="font-comfortaa font-normal text-xs my-3">
+        <p>
             CGU réalisées sur http://legalplace.fr
         </p>
         
