@@ -19,6 +19,10 @@
 
 @layer base {
 
+    h2 {
+        @apply font-raleway font-normal text-xl
+    }
+
     p {
         @apply text-lg text-black-primary font-comfortaa
     }

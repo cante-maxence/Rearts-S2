@@ -1,5 +1,5 @@
 <template>
-        <h2 class="font-raleway font-normal text-xl">FAQ</h2>
+        <h2>FAQ</h2>
 
         <div class="font-comfortaa">
             <p class="font-normal text-base my-3">

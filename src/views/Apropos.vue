@@ -1,6 +1,6 @@
 <template>
 
-        <h2 class="font-raleway font-normal text-xl">A propos</h2>
+        <h2>A propos</h2>
 
         <p class="font-comfortaa font-normal text-base my-3">
             Nous sommes un groupe de 3 étudiants en BUT MMI à Montbéliard. <br>

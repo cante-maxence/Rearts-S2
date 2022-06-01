@@ -1,6 +1,6 @@
 <template>
 
-        <h2 class="font-raleway font-normal text-xl">Mentions légales</h2>
+        <h2>Mentions légales</h2>
 
         <h3 class="font-comfortaa font-bold text-lg my-3">
             Conditions générales d'utilisation

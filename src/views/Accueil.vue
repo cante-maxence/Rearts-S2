@@ -1,28 +1,7 @@
 <template>
       
-    <main class="m-5">
+    <main>
 
-        <p>
-            test
-        </p>
-        <Bouton>
-            <slot>Faire un don</slot>
-        </Bouton>
-
-        <section>
-            <article v-for="artist in artists" :key="artist.id">
-                <card 
-                    :imagep="artist.imagep"
-                    :name="artist.name"
-                    :image="artist.image"
-                    :text="artist.text"
-                    :price="artist.price"
-                    :like="artist.like"
-                    :note="artist.note"
-                    :link="artist.link"
-                />
-            </article>
-        </section>
 
   </main>
 
