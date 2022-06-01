@@ -2,7 +2,7 @@
 
         <h2>A propos</h2>
 
-        <p class="font-comfortaa font-normal text-base my-3">
+        <p>
             Nous sommes un groupe de 3 étudiants en BUT MMI à Montbéliard. <br>
 
             Nous sommes donc arrivé ici et avons créés ce site. <br>

@@ -2,11 +2,11 @@
         <h2>FAQ</h2>
 
         <div class="font-comfortaa">
-            <p class="font-normal text-base my-3">
+            <p>
                 Questions les plus récurentes
             </p>
 
-            <h3 class="font-bold text-lg my-3">
+            <h3>
                 Comment trouver des artistes ?
             </h3>
 
@@ -20,11 +20,11 @@
                 </li>
             </ul>
 
-            <h3 class="font-bold text-lg my-3">
+            <h3>
                 Comment trouver des artistes ?
             </h3>
 
-            <p class="font-normal text-base">
+            <p>
                 En vigueur au 12/04/2022 <br>
 
                 Les présentes conditions générales d'utilisation (dites « CGU ») ont pour objet l'encadrement juridique
