@@ -1,9 +1,26 @@
 <template>
-      
-    <main>
+
+<h2>Découvrez réarts !</h2>
+<p>
+    Un site sur lequel l’imagination d’un enfant ce rencontre avec les capacitées d’un artiste !
+</p>
+<p class="font-bold text-Rouge">
+    Un petit dessin pour lui, un grand souvenir pour vous !
+</p>
+<Bouton>
+    <slot>S'inscrire</slot>
+</Bouton>
+
+<h3>
+    Les tendances !
+</h3>
 
 
-  </main>
+
+
+
+
+
 
 </template>
 

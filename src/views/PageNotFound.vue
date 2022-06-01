@@ -7,9 +7,9 @@
         <p class="m-5">
             Page not found. The page you requested was not found
         </p>
-        <bouton type="bouton" @click="redirectMe()" class="btn btnsecondary" > 
+        <Bouton type="bouton" @click="redirectMe()" class="btn btnsecondary" > 
             Retour à l'accueil 
-        </bouton>
+        </Bouton>
     </div>
 
 </template>
@@ -18,7 +18,7 @@
 
 
 <script>
-import bouton from '/src/components/icones/bouton.vue'
+import Bouton from '/src/components/icones/bouton.vue'
 
 export default {
         name: "PageNotFound",
@@ -30,7 +30,7 @@ export default {
         },
 
         components: { 
-            bouton,
+            Bouton,
         }
 
 }

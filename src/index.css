@@ -23,6 +23,11 @@
         @apply font-raleway font-normal text-xl
     }
 
+    h3 {
+        @apply font-comfortaa font-bold text-lg my-3
+    }
+
+
     p {
         @apply text-lg text-black-primary font-comfortaa
     }

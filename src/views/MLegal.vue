@@ -2,7 +2,7 @@
 
         <h2>Mentions légales</h2>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">
+        <h3>
             Conditions générales d'utilisation
         </h3>
 
@@ -24,7 +24,7 @@
             présentes CGU. <br>
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">
+        <h3>
             Article 1 : Les mentions légales
         </h3>
 
@@ -39,7 +39,7 @@
             dont le siège social est situé au Suisse, Genève, avec le numéro de téléphone : 0356479895.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">
+        <h3>
             ARTICLE 2 : Accès au site
         </h3>
 
@@ -69,7 +69,7 @@
             l’éditeur communiqué à l’ARTICLE 1.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">
+        <h3>
             ARTICLE 3 : Collecte des données
         </h3>
 
@@ -83,7 +83,7 @@
             par mail à l'adresse email maxence.cante@edu.univ-fcomte.fr
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">            
+        <h3>            
             ARTICLE 4 : Propriété intellectuelle
         </h3>
 
@@ -103,7 +103,7 @@
             reproduit, copie ou publie le contenu protégé doit citer l’auteur et sa source.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">            
+        <h3>            
             ARTICLE 5 : Responsabilité
         </h3>
 
@@ -122,7 +122,7 @@
             La responsabilité du site ne peut être engagée en cas de force majeure ou du fait imprévisible et insurmontable d'un tiers.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">            
+        <h3>            
             ARTICLE 6 : Liens hypertextes
         </h3>
 
@@ -133,7 +133,7 @@
             Ce dernier n’a pas de contrôle sur les pages web sur lesquelles aboutissent ces liens et ne saurait, en aucun cas, être responsable de leur contenu.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">            
+        <h3>            
             ARTICLE 7 : Cookies
         </h3>
 
@@ -150,7 +150,7 @@
             L’Utilisateur pourra désactiver ces cookies par l’intermédiaire des paramètres figurant au sein de son logiciel de navigation.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">                      
+        <h3>                      
             ARTICLE 8 : Publication par l’Utilisateur
         </h3>
 
@@ -176,7 +176,7 @@
             Le contenu de l'Utilisateur peut être à tout moment et pour n'importe quelle raison supprimé ou modifié par le site, sans préavis.
         </p>
 
-        <h3 class="font-comfortaa font-bold text-lg my-3">                      
+        <h3>                      
             ARTICLE 9 : Droit applicable et juridiction compétentez
         </h3>
 
