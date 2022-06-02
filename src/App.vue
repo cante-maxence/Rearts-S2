@@ -6,7 +6,10 @@
 
     <section>
       <div  class="w-max ">
-        <Profil class="h-12 w-auto mr-2 inline-block fill-blanc-primary"/> 
+        <RouterLink to="/">
+          <Profil class="h-12 w-auto mr-2 inline-block stroke-blanc-primary"/> 
+        </RouterLink>
+        
       </div>
       
     <div>
