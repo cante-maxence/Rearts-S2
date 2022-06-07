@@ -1,14 +1,16 @@
 <template>
-    oeoeoeo
-    <button @click="onDcnx()">
-        Déconnexion
-    </button>
+
+    <Bouton
+    @click="onDcnx()" >
+        Deconnexion
+    </Bouton>
 </template>
 
 
 
 
 <script>
+import Bouton from "/src/components/icones/bouton.vue";
 // Import des fonction d'authentification
 import { 
     getAuth,                        // Fonction générale d'authentification
@@ -36,6 +38,11 @@ export default {
     mounted(){ // Montage de la vue
         this.message = "User non connecté";
     },
+
+    components: {
+        Bouton,
+    },
+
     methods:{
         
         // Se deconnecter
