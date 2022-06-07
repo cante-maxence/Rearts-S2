@@ -1,25 +1,30 @@
 <template>
 
-    <h2>Découvrez réarts !</h2>
-    <p>
-        Un site sur lequel l’imagination d’un enfant ce rencontre avec les capacitées d’un artiste !
-    </p>
-    <p class="font-bold text-Rouge">
-        Un petit dessin pour lui, un grand souvenir pour vous !
-    </p>
 
-    <RouterLink to="/Inscription">
-        <Bouton>
-            <slot>S'inscrire</slot>
-        </Bouton>
-    </RouterLink>
+    <div class="items-center text-center">
+        <h2>Découvrez réarts !</h2>
+        <p>
+            Un site sur lequel l’imagination d’un enfant ce rencontre avec les capacitées d’un artiste !
+        </p>
+        <p class="font-bold text-Rouge">
+            Un petit dessin pour lui, un grand souvenir pour vous !
+        </p>
+
+        <div class="py-4">
+            <RouterLink to="/Inscription">
+                <Bouton>
+                    <slot>S'inscrire</slot>
+                </Bouton>
+            </RouterLink>
+        </div>
+    </div>
 
     <h3>
         Les tendances !
     </h3>
 
             <!-- caroussel -->
-    <div class="relative rounded-xl overflow-auto">
+    <div class="relative rounded-xl overflow-auto mb-4">
     <!-- Contents -->
     <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-3 pt-3">
         <div class="snap-center shrink-0">
@@ -59,20 +64,52 @@
     </div>
             <!-- caroussel -->
 
-    <RouterLink to="/NosArtistes">
-        <Bouton>
-            <slot>Découvrir</slot>
-        </Bouton>     
-    </RouterLink>
+    <div class="float-right">
+        <RouterLink to="/NosArtistes">
+            <Bouton>
+                <slot>Découvrir</slot>
+            </Bouton>     
+        </RouterLink>
+    </div>
 
-    <h3>
+    <h3 class="mt-24">
         N’oubliez pas les associations !
     </h3>
     <p>
         Pour chaque dessins n’oubliez de sélectionnez une association partenaires.
     </p>
-    <img class="shrink-0 w-28 h-28 shadow-xl bg-white" src="/images-hp/Association1.jpg">
-    <img class="shrink-0 w-28 h-28 shadow-xl bg-white" src="/images-hp/Association2.jpg">
+
+
+            <!-- caroussel -->
+    <div class="relative rounded-xl overflow-auto mb-4">
+    <!-- Contents -->
+    <div class="relative w-full flex gap-6 snap-x snap-mandatory overflow-x-auto pb-3 pt-3">
+        <div class="snap-center shrink-0">
+        <div class="shrink-0 w-4 sm:w-48"></div>
+        </div>
+        <div class="snap-center shrink-0 first:pl-8 last:pr-8">
+        <img class="shrink-0 w-28 h-28 rounded-lg shadow-xl bg-white" src="/images-hp/Association1.jpg">
+        </div>
+        <div class="snap-center shrink-0 first:pl-8 last:pr-8">
+        <img class="shrink-0 w-28 h-28 rounded-lg shadow-xl bg-white" src="/images-hp/Association2.jpg">
+        </div>
+        <div class="snap-center shrink-0 first:pl-8 last:pr-8">
+        <img class="shrink-0 w-28 h-28 rounded-lg shadow-xl bg-white" src="/images-hp/Association3.jpg">
+        </div>
+        <div class="snap-center shrink-0 first:pl-8 last:pr-8">
+        <img class="shrink-0 w-28 h-28 rounded-lg shadow-xl bg-white" src="/images-hp/Association4.jpg">
+        </div>
+        <div class="snap-center shrink-0 first:pl-8 last:pr-8">
+        <img class="shrink-0 w-28 h-28 rounded-lg shadow-xl bg-white" src="/images-hp/Association5.jpg">
+        </div>
+
+
+        </div>
+        <div class="snap-center shrink-0">
+        <div class="shrink-0 w-4 sm:w-48"></div>
+        </div>
+    </div>
+
 
     <RouterLink to="/Dons">    
         <Bouton>

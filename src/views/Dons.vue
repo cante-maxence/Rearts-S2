@@ -5,7 +5,7 @@
 
         <dh-component>
 
-            <div role="radiogroup" class="mx-auto py-12">
+            <div role="radiogroup" class="mx-auto py-5">
 
                 <div class="flex items-center py-3">
                     <div class="bg-white dark:bg-gray-100 rounded-full w-4 h-4 flex flex-shrink-0 justify-center items-center relative">
@@ -53,21 +53,77 @@
                         <div class="check-icon hidden border-4 border-Rouge rounded-full w-full h-full z-1"></div>
                     </div>
                     <p id="label1" class=" ml-2 leading-4 font-normal text-black-primary dark:text-gray-100">Autre montant</p>
-                    <input type="text" class="font-comfortaa text-black-primary p-1  focus:outline-none focus:border-blue-700 mx-2 border-0 bg-Gris_Clair"/>
+                    <input type="text" class="font-comfortaa text-black-primary p-1  rounded focus:outline-none focus:border-blue-700 mx-2 border-0 bg-Gris_Clair"/>
                 </div>
             </div>
         </dh-component>
 
-        <Bouton>
-            <slot>Faire un don</slot>
-        </Bouton>
+        <div class="flex flex-col text-center items-center">
+            <Bouton>
+                <slot>Faire un don</slot>
+            </Bouton>
+        </div>
 
+        <hr class="h-0.5 m-5 bg-Gris_Clair">
+
+        <h2>Les associations partenaraires</h2>
+
+
+
+
+
+        <div class="flex flex-col items-center text-center my-10">
+            <div
+                class="flex flex-row  border h-10 w-60 rounded-lg border-gray-400 relative"
+            >
+                <button
+                class="font-semibold border-r bg-Rouge hover:bg-ClearRed text-white border-gray-400 h-full w-32 flex rounded-l focus:outline-none cursor-pointer"
+                >
+                <ChevronLeftIcon class="m-auto w-5 stroke-white" />
+                </button>
+                <div
+                class=" bg-Gris_Clair w-24 text-xs md:text-base flex items-center justify-center cursor-default p-4"
+                >
+                <p>1</p>
+                </div>
+                <div
+                class="hover:bg-Gris_Clair w-24 text-xs md:text-base flex items-center justify-center cursor-default p-4"
+                >
+                <p>2</p>
+                </div>
+                <div
+                class="hover:bg-Gris_Clair w-24 text-xs md:text-base flex items-center justify-center cursor-default p-4"
+                >
+                <p>3</p>
+                </div>
+                <div
+                class="hover:bg-Gris_Clair w-24 text-xs md:text-base flex items-center justify-center cursor-default p-4"
+                >
+                <p>4</p>
+                </div>
+            
+                <button
+                class="font-semibold border-l  bg-Rouge hover:bg-ClearRed text-white border-gray-400 h-full w-32 flex rounded-r focus:outline-none cursor-pointer"
+                >
+                <ChevronRightIcon class="m-auto w-5 stroke-white" />
+                </button>
+            </div>
+        </div>
 
     </main>
 </template>
 
-<script>
 
+
+<script>
+import Bouton from "/src/components/icones/bouton.vue"
+
+export default {
+    components: { 
+        Bouton,
+
+    }
+}
 
 </script>
 
