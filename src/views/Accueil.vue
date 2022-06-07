@@ -7,9 +7,12 @@
     <p class="font-bold text-Rouge">
         Un petit dessin pour lui, un grand souvenir pour vous !
     </p>
-    <Bouton>
-        <slot>S'inscrire</slot>
-    </Bouton>
+
+    <RouterLink to="/Inscription">
+        <Bouton>
+            <slot>S'inscrire</slot>
+        </Bouton>
+    </RouterLink>
 
     <h3>
         Les tendances !
@@ -56,9 +59,11 @@
     </div>
             <!-- caroussel -->
 
-    <Bouton>
-        <slot>Découvrir</slot>
-    </Bouton>
+    <RouterLink to="/NosArtistes">
+        <Bouton>
+            <slot>Découvrir</slot>
+        </Bouton>     
+    </RouterLink>
 
     <h3>
         N’oubliez pas les associations !
@@ -69,9 +74,11 @@
     <img class="shrink-0 w-28 h-28 shadow-xl bg-white" src="/images-hp/Association1.jpg">
     <img class="shrink-0 w-28 h-28 shadow-xl bg-white" src="/images-hp/Association2.jpg">
 
-    <Bouton>
-        <slot>Voir plus</slot>
-    </Bouton>
+    <RouterLink to="/Dons">    
+        <Bouton>
+            <slot>Voir plus</slot>
+        </Bouton>
+    </RouterLink>
 
     <h3>
         Des vidéos youtube !
