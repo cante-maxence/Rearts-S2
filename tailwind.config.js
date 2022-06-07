@@ -9,6 +9,7 @@ module.exports = {
         "black-primary": "#0f0e0e",
         "blanc-primary": "#f4f1f1",
         "Gris_Clair": "#dbdbdb",
+        "Gris_Francanglais": "#f9f9f9",
         "Rouge": "#a40b0b",
         "star-color": "#dbde4c",
         "ClearRed": "#c41313"

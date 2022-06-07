@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './index.css'
+import '/node_modules/tiny-slider/dist/tiny-slider.css';
 
 // Import de mitt
 import mitt from 'mitt';

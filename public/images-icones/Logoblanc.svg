@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 1133.9 1133.9" style="enable-background:new 0 0 1133.9 1133.9;" xml:space="preserve">
+	 viewBox="0 0 651.1 651.1" style="enable-background:new 0 0 651.1 651.1;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#F4F1F1;stroke:#F4F1F1;stroke-width:10;stroke-miterlimit:10;}
 	.st1{fill:none;stroke:#F4F1F1;stroke-width:20;stroke-miterlimit:10;}
 </style>
-<path class="st0" d="M754.6,559.7l-235.9-2L585.3,675c0,0,52.5-60.8,101.9,0.1C754.6,559.7,754.6,559.7,754.6,559.7z"/>
-<circle class="st1" cx="673.4" cy="227.4" r="80.2"/>
-<line class="st1" x1="519.9" y1="512.2" x2="519.9" y2="181"/>
-<line class="st1" x1="572.3" y1="337.6" x2="756.9" y2="504.5"/>
-<path class="st0" d="M597.8,697l38.8,64.9l37.2-64.9C673.9,697,637.4,645.6,597.8,697z"/>
+<path class="st0" d="M442.3,430.7l-235.9-2L273,546c0,0,52.5-60.8,101.9,0.1C442.3,430.7,442.3,430.7,442.3,430.7z"/>
+<circle class="st1" cx="361.1" cy="98.4" r="80.2"/>
+<line class="st1" x1="207.6" y1="383.2" x2="207.6" y2="52"/>
+<line class="st1" x1="260" y1="208.6" x2="444.6" y2="375.5"/>
+<path class="st0" d="M285.5,568l38.8,64.9l37.2-64.9C361.6,568,325.1,516.6,285.5,568z"/>
 </svg>

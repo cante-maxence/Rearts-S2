@@ -24,20 +24,20 @@
                     <div class="md:flex items-center">
                         <div class="w-full md:w-1/2 flex flex-col">
                             <label class="font-comfortaa text-base font-semibold text-black-primary">Email</label>
-                            <input type="text" class="font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-Rouge rounded" />
+                            <input type="text" class="font-comfortaa text-black-primary p-3 focus:outline-none focus:border-Rouge mt-4 border-2 border-Gris_Francanglais rounded bg-Gris_Francanglais" />
                         </div>
                     </div>
                     <div class="md:flex items-center mt-6">
                         <div class="w-full flex flex-col">
                             <label class="font-comfortaa text-base font-semibold text-black-primary">Objet</label>
-                            <input type="text" class="font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-Rouge rounded"/>
+                            <input type="text" class="font-comfortaa text-black-primary p-3 focus:outline-none focus:border-Rouge mt-4 border-2 border-Gris_Francanglais rounded bg-Gris_Francanglais"/>
                         </div>
                         
                     </div>
                     <div>
                         <div class="w-full flex flex-col mt-6">
                             <label class="font-comfortaa text-base font-semibold text-black-primary">Message</label>
-                            <textarea type="text" class="h-40 text-base font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 bg-Rouge border-0 rounded"></textarea>
+                            <textarea type="text" class="h-40 text-base font-comfortaa text-black-primary p-3 focus:outline-none focus:border-Rouge border-2 border-Gris_Francanglais rounded bg-Gris_Francanglais"></textarea>
                         </div>
                     </div>
                     <div class="flex items-center justify-center w-full">
