@@ -11,6 +11,7 @@ import NosArtistes from '../views/NosArtistes.vue'
 import PageArtiste from '../views/PageArtiste.vue'
 import PageNotFound from '../views/PageNotFound.vue'
 import Connexion from '../views/Connexion.vue'
+import Favoris from '../views/Favoris.vue'
 
 
 const router = createRouter({
@@ -28,6 +29,7 @@ const router = createRouter({
     { path: '/:pathMatch(.*)*',             name: 'PageNotFound',         component: PageNotFound },
     { path: '/Connexion',                   name: 'Connexion',            component: Connexion    },
     { path: '/Profil',                      name: 'Profil',               component: Profil       },
+    { path: '/Favoris',                      name: 'Favoris',               component: Favoris       },
   ]
 })
 

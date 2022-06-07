@@ -14,9 +14,26 @@
           </RouterLink>
         </div>
         <div v-if="userInfo !== null">
-          <RouterLink to="/Profil">
-            <Profil class="h-12 w-auto mr-2 inline-block stroke-blanc-primary"/> 
-          </RouterLink>
+          <Menu>
+          <Button><Profil class="h-12 w-auto mr-2 inline-block stroke-blanc-primary"/></Button>
+          <MenuItems>
+            <MenuItem>
+              <RouterLink class="bg-blue-500" to="/Profil">
+                Profil
+              </RouterLink>
+            </MenuItem>
+            <MenuItem>
+              <RouterLink class="bg-blue-500" to="/Messagerie">
+                Messagerie
+              </RouterLink>
+            </MenuItem>
+            <MenuItem>
+              <RouterLink class="bg-blue-500" to="/Favoris">
+                Favoris
+              </RouterLink>
+            </MenuItem>
+          </MenuItems>
+          </Menu>
         </div>
       </div>
       <div>
@@ -24,7 +41,7 @@
         <nav class=" h-full">
           <button class="z-50 absolute top-6 right-8" aria-haspopup="true" aria-controls="menu" 
               :aria-expanded="menuOuvert" @click="menuOuvert = !menuOuvert">
-              <Menu class="h-12 w-12 fill-blanc-primary stroke-blanc-primary" />
+              <MenuIcon class="h-12 w-12 fill-blanc-primary stroke-blanc-primary" />
           </button>
 
           <div id="menu" class="z-50 fixed inset-0 translate-x-full bg-HeadFoot motion-safe:duration-1000 motion-safe:transition-transform
@@ -115,12 +132,15 @@
 
 
 <script>
+
+import { Menu, MenuButton, MenuItems, MenuItem } from '@headlessui/vue'
+
 import { RouterLink, RouterView } from "vue-router";
 import Facebook from "/src/components/icones/facebook.vue";
 import Instagram from "/src/components/icones/instagram.vue";
 import Youtube from "/src/components/icones/youtube.vue";
 import Bouton from "/src/components/icones/bouton.vue"
-import Menu from "./components/icones/menu.vue";
+import MenuIcon from "./components/icones/menu.vue";
 import Profil from "./components/icones/profil.vue";
 import croix from "/src/components/icones/croix.vue";
 import {  } from "@heroicons/vue/outline";
@@ -158,7 +178,7 @@ export default {
     Instagram, 
     Youtube,
     Bouton,
-    Menu,
+    MenuIcon,
     Profil,
     croix
   },
@@ -171,7 +191,7 @@ export default {
         password:null
       },
       userInfo:null,      // Informations complémentaires user connecté
-      name:"",       // Titre de l'application ou nom du user
+      name:"Vidéo",       // Titre de l'application ou nom du user
       avatar:null,        // Avatar / image du user connecté
       isAdmin:false       // Si l'utilisateur est ou non administrateur
     }

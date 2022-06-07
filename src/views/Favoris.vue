@@ -1,0 +1,3 @@
+<template>
+    favoris
+</template>
