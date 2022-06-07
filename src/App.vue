@@ -50,7 +50,7 @@
                   </RouterLink>
                   <RouterLink to="/Dons" @click="menuOuvert = !menuOuvert">
                     <div class="p-3  my-5 text-blanc-primary justify-around ">
-                      <h2 class="font-medium">Dons | Associatiations</h2> 
+                      <h2 class="font-medium">Dons | Associations</h2> 
                     </div>
                   </RouterLink>
                   <RouterLink to="/FAQ" @click="menuOuvert = !menuOuvert">

@@ -1,29 +1,32 @@
 <template>
-    <form @submit.prevent="onCnx">
-        <div>
-            <input 
-                class="form-control" placeholder="Adresse mail" type="email"
-                v-model="user.email" required />                    
-                
-            <input 
-                class="form-control" placeholder="Mot de passe" 
-                :type="type" v-model="user.password" required
-                />
-        </div>                    
-                        
-        <div>   
-            <button type="submit" class="float-left btn btn-dark" >
-                Connexion
-            </button>
-            <button type="button" class="float-right btn btn-dark"
-            @click="onDcnx()" >
-                Deconnexion
-            </button>
-        </div>
-    </form>
+    <main>
+        <form @submit.prevent="onCnx">
+            <div>
+                <input 
+                    class="form-control" placeholder="Adresse mail" type="email"
+                    v-model="user.email" required />                    
+                    
+                <input 
+                    class="form-control" placeholder="Mot de passe" 
+                    :type="type" v-model="user.password" required
+                    />
+            </div>                    
+                            
+            <div>   
+                <Bouton type="submit" class="float-left btn btn-dark" >
+                    Connexion
+                </Bouton>
+                <button type="button" class="float-right btn btn-dark"
+                @click="onDcnx()" >
+                    Deconnexion
+                </button>
+            </div>
+        </form>    
+    </main>
 </template>
 
 <script>
+import Bouton from "/src/components/icones/bouton.vue";
 // Import des fonction d'authentification
 import { 
     getAuth,                        // Fonction générale d'authentification
@@ -51,6 +54,11 @@ export default {
     mounted(){ // Montage de la vue
         this.message = "User non connecté";
     },
+
+    components: {
+        Bouton,
+    },
+
     methods:{
 
         onCnx(){                
