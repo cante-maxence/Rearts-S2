@@ -1,25 +1,28 @@
 <template>
-    <main>
+    <main class="mb-16">
+
+        <h2>Connecte toi !</h2>
+
         <form @submit.prevent="onCnx">
             <div>
                 <input 
-                    class="form-control" placeholder="Adresse mail" type="email"
+                    class="form-control my-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Adresse mail" type="email"
                     v-model="user.email" required />                    
                     
                 <input 
-                    class="form-control" placeholder="Mot de passe" 
+                    class="form-control my-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Mot de passe" 
                     :type="type" v-model="user.password" required
                     />
             </div>                    
                             
-            <div>   
+            <div class="my-3 p-1">   
                 <Bouton type="submit" class="float-left btn btn-dark" >
                     Connexion
                 </Bouton>
-                <button type="button" class="float-right btn btn-dark"
+                <Bouton type="button" class="float-right btn btn-dark"
                 @click="onDcnx()" >
                     Deconnexion
-                </button>
+                </Bouton>
             </div>
         </form>    
     </main>
