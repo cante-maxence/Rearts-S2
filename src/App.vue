@@ -78,8 +78,9 @@
       </div>
         <span class="font-comfortaa font-normal text-lg ">Nous rejoindre</span>
       <div>
-        <Facebook class="fill-blanc-primary inline-block m-3 mx-5"></Facebook>
-        <Instagram class="fill-blanc-primary inline-block m-3 mx-5"></Instagram>
+        <Facebook class="fill-blanc-primary inline-block m-3 mx-3"></Facebook>
+        <Instagram class="fill-blanc-primary inline-block m-3 mx-3"></Instagram>
+        <Youtube class="fill-blanc-primary inline-block m-3 mx-3"></Youtube>
       </div>
         <Bouton class=" m-3">
           <RouterLink to="/Inscription" class=" m-3">
@@ -110,6 +111,7 @@
 import { RouterLink, RouterView } from "vue-router";
 import Facebook from "/src/components/icones/facebook.vue";
 import Instagram from "/src/components/icones/instagram.vue";
+import Youtube from "/src/components/icones/youtube.vue";
 import Bouton from "/src/components/icones/bouton.vue"
 import Menu from "./components/icones/menu.vue";
 import Profil from "./components/icones/profil.vue";
@@ -130,6 +132,7 @@ export default {
     RouterView,
     Facebook, 
     Instagram, 
+    Youtube,
     Bouton,
     Menu,
     Profil,
