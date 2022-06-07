@@ -10,6 +10,7 @@ module.exports = {
         "blanc-primary": "#f4f1f1",
         "Gris_Clair": "#dbdbdb",
         "Rouge": "#a40b0b",
+        "darkred": "e40b0b",
         "star-color": "#dbde4c"
       },
       "fontSize": {

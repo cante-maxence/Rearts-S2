@@ -8,7 +8,7 @@
 
     <div>
       <div  class="w-max ">
-        <RouterLink to="/">
+        <RouterLink to="/Profil">
           <Profil class="h-12 w-auto mr-2 inline-block stroke-blanc-primary"/> 
         </RouterLink>
       </div>
