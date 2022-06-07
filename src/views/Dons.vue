@@ -64,11 +64,52 @@
             </Bouton>
         </div>
 
-        <hr class="h-0.5 m-5 bg-Gris_Clair">
+        <hr class="h-0.5 mt-8 mb-4 bg-Gris_Clair">
 
         <h2>Les associations partenaraires</h2>
 
 
+        <div class="my-8">
+            <h3>
+                L'association Enfants du Désert
+            </h3>
+    
+            <div class="flex  items-center">
+                <img class="w-32 h-32 ml-5" src="/images-hp/Association2.jpg" alt="">
+        
+                <p class="ml-8 mr-3">
+                    Une association loi 1901 à but non lucratif qui vient en aide aux enfants du sud marocain et d'Argentine.
+                </p>
+            </div>
+        </div>
+
+        <div class="my-8">
+            <h3>
+                Les Blouses Roses 
+            </h3>
+    
+            <div class="flex  items-center">
+                <img class="w-32 h-32 ml-5" src="/images-hp/Association1.jpg" alt="">
+        
+                <p class="ml-8 mr-3">
+                    Interviennent principalement auprès des enfants hospitalisés et des personnes âgées en Ehpad.
+                </p>
+            </div>
+        </div>
+
+        <div class="my-8">
+            <h3>
+                30 millions d’amis
+            </h3>
+    
+            <div class="flex  items-center">
+                <img class="w-32 h-32 ml-5" src="/images-hp/Association5.jpg" alt="">
+        
+                <p class="ml-8 mr-3">
+                    Elle vise à lutter contre les abandons, contre les trafics d’animaux, et tente d’améliorer les lois pour protéger les animaux.
+                </p>
+            </div>
+        </div>
 
 
 

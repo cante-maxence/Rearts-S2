@@ -19,7 +19,7 @@
 
         <div class="h-96 -mt-14"></div>
         <div class="max-w-5xl mx-auto px-6 sm:px-6 lg:px-8 mb-12">
-            <div class="bg-Gris_Clair w-full shadow rounded p-8 sm:p-12 -mt-72">
+            <div class="bg-Gris_Clair w-full shadow rounded p-6 sm:p-12 -mt-72">
                 <form action="" method="post">
                     <div class="md:flex items-center">
                         <div class="w-full md:w-1/2 flex flex-col">
@@ -27,7 +27,7 @@
                             <input type="text" class="font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-Rouge rounded" />
                         </div>
                     </div>
-                    <div class="md:flex items-center mt-8">
+                    <div class="md:flex items-center mt-6">
                         <div class="w-full flex flex-col">
                             <label class="font-comfortaa text-base font-semibold text-black-primary">Objet</label>
                             <input type="text" class="font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 border-0 bg-Rouge rounded"/>
@@ -35,13 +35,13 @@
                         
                     </div>
                     <div>
-                        <div class="w-full flex flex-col mt-8">
+                        <div class="w-full flex flex-col mt-6">
                             <label class="font-comfortaa text-base font-semibold text-black-primary">Message</label>
                             <textarea type="text" class="h-40 text-base font-comfortaa text-blanc-primary p-3 focus:outline-none focus:border-blue-700 mt-4 bg-Rouge border-0 rounded"></textarea>
                         </div>
                     </div>
                     <div class="flex items-center justify-center w-full">
-                        <Bouton class="mt-9  focus:ring-2 focus:ring-offset-1 focus:ring-red-900 focus:outline-none">
+                        <Bouton class="mt-6  focus:ring-2 focus:ring-offset-1 focus:ring-red-900 focus:outline-none">
                             Send message
                         </Bouton>
                     </div>

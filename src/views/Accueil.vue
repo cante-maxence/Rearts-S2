@@ -1,6 +1,6 @@
 <template>
 
-
+<main class="pb-6">
     <div class="items-center text-center">
         <h2>Découvrez réarts !</h2>
         <p>
@@ -64,7 +64,7 @@
     </div>
             <!-- caroussel -->
 
-    <div class="float-right">
+    <div class="ml">
         <RouterLink to="/NosArtistes">
             <Bouton>
                 <slot>Découvrir</slot>
@@ -110,22 +110,26 @@
         </div>
     </div>
 
+    <div class="float-right">
+        <RouterLink to="/Dons">    
+            <Bouton>
+                <slot>Voir plus</slot>
+            </Bouton>
+        </RouterLink>
+    </div>
 
-    <RouterLink to="/Dons">    
-        <Bouton>
-            <slot>Voir plus</slot>
-        </Bouton>
-    </RouterLink>
-
-    <h3>
+    <h3 class="mt-24">
         Des vidéos youtube !
     </h3>
     <p>
         Venez découvrir les différents artistes de Réarts sur notre chaînes Youtube ! 
     </p>
-    <iframe width="auto" height="200" src="https://www.youtube.com/embed/uAPNFdrLINM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+    <div class="flex justify-center">
+        <iframe width="full" height="auto" src="https://www.youtube.com/embed/uAPNFdrLINM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+    </div>
+</main>
 
 
 </template>
