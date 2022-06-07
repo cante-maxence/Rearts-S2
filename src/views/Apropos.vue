@@ -41,7 +41,7 @@
                         </div>
                     </div>
                     <div class="flex items-center justify-center w-full">
-                        <Bouton class="mt-9  hover:bg-blue-900 focus:ring-2 focus:ring-offset-2 focus:ring-blue-700 focus:outline-none">
+                        <Bouton class="mt-9  focus:ring-2 focus:ring-offset-1 focus:ring-red-900 focus:outline-none">
                             Send message
                         </Bouton>
                     </div>
