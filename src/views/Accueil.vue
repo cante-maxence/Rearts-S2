@@ -51,11 +51,11 @@
 
         <!-- Contents -->
         <div class="association py-3 w-full overflow-hidden">
-            <div><img src="/images-hp/Association1.jpg"></div>
-            <div><img src="/images-hp/Association2.jpg"></div>
-            <div><img src="/images-hp/Association3.jpg"></div>
-            <div><img src="/images-hp/Association4.jpg"></div>
-            <div><img src="/images-hp/Association5.jpg"></div>
+            <div><img class="h-40 w-40" src="/images-hp/Association1.jpg"></div>
+            <div><img class="h-40 w-40" src="/images-hp/Association2.jpg"></div>
+            <div><img class="h-40 w-40" src="/images-hp/Association3.jpg"></div>
+            <div><img class="h-40 w-40" src="/images-hp/Association4.jpg"></div>
+            <div><img class="h-40 w-40" src="/images-hp/Association5.jpg"></div>
         </div>
 
         <div class="flex justify-end">
@@ -73,7 +73,7 @@
             Venez découvrir les différents artistes de Réarts sur notre chaînes Youtube ! 
         </p>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center mt-5 mb-3">
             <iframe width="full" height="auto" src="https://www.youtube.com/embed/uAPNFdrLINM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
@@ -101,7 +101,7 @@ export default {
             items: 1,
             autoplay: true,
             mode: 'gallery',
-            autoplayTimeout: 10000,
+            autoplayTimeout: 5000,
             autoplayButtonOutput: false,
             nav: false,
             controls: false,

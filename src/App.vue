@@ -88,7 +88,7 @@
   <footer v-if="!['PageNotFound'].includes($route.name)">
     <section class="flex flex-col items-center text-center bg-HeadFoot text-PrincipalyText pt-4 pb-8 bg-black-primary text-blanc-primary">
       <div class="flex items-center">
-        <img class="w-28 h-auto -mx-6" src="/images-icones/Logoblanc.svg" alt="">
+        <img class="w-14 h-auto" src="/images-icones/Logoblanc.svg" alt="">
         <h3 class="font-comfortaa font-normal text-xl">éarts</h3>
       </div>
         <span class="font-comfortaa font-normal text-lg ">Nous rejoindre</span>

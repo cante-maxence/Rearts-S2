@@ -19,10 +19,6 @@
                 <Bouton type="submit" class="float-left btn btn-dark" >
                     Connexion
                 </Bouton>
-                <Bouton type="button" class="float-right btn btn-dark"
-                @click="onDcnx()" >
-                    Deconnexion
-                </Bouton>
             </div>
         </form>    
     </main>
