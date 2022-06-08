@@ -1,39 +1,71 @@
 <template>
+    <main>
+        <div class="flex items-center justify-center">
+            <img :src="prof.avatar" alt="" class="rounded-full h-40 border-2 border-black-primary relative">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--bi absolute top-60 left-auto" width="32" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><path fill="currentColor" d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793L14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5L3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"></path></svg>
+        </div>
 
-    <Bouton
-    @click="onDcnx()" >
-        Deconnexion
-    </Bouton>
-
-<RouterLink to="/Messagerie"><Bouton>Me contacter !</Bouton></RouterLink>
-
-Note {{ prof.note }}
+        <h2>{{ prof.login }}</h2>
 
 
-<p>Nom d'Utilisateur</p>
-{{ prof.login }}
-<img :src="prof.avatar" alt="" class="rounded-full">
+        <Star class="h-auto w-5 mr-1 inline-block fill-star-color" />
+        <p class="text-star-color font-comfortaa font-medium text-base inline-block">
+                {{ prof.note }}
+        </p>
 
-<div>
-    <h1>Bio</h1>
-{{ prof.bio }}
-</div>
 
-<div>
-    <h1>Compétences</h1>
-{{ prof.comp1 }}
-{{ prof.comp2 }}
-{{ prof.comp3 }}
-{{ prof.comp4 }}
-</div>
+        <RouterLink to="/Messagerie">
+            <Bouton>
+                Me contacter !
+            </Bouton>
+        </RouterLink>
+            
+            <Bouton
+            @click="onDcnx()" >
+                Deconnexion
+            </Bouton>
+        
+        
+        
+        <div class="border-2 border-Gris_Clair px-3 pb-3 mt-6">
+            <h3>Bio</h3>
 
-<div>
-    <h1>Services</h1>
-    <img :src="prof.img1" alt="" class="w-96">
-    <img :src="prof.img2" alt="" class="w-96">
-    <img :src="prof.img3" alt="" class="w-96">
-    <img :src="prof.img4" alt="" class="w-96">
-</div>
+            <p>{{ prof.bio }}</p>
+        </div>
+        
+        <div class="border-2 border-Gris_Clair px-3 pb-3 mt-6">
+            <h3>Compétences</h3>
+            <div class="flex mt-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                <p>{{ prof.comp1 }}</p>
+            </div>
+            <div class="flex mt-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                <p>{{ prof.comp2 }}</p>
+            </div>
+            <div class="flex mt-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                <p>{{ prof.comp3 }}</p>
+            </div>
+            <div class="flex mt-2 items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                <p>{{ prof.comp4 }}</p>
+            </div>
+        </div>
+        
+        <div class="border-2 border-Gris_Clair px-3 pb-3 mt-6">
+            <h3>Services</h3>
+            <div class="flex items-center">
+                <img :src="prof.img1" alt="" class="border-2 border-Gris_Clair h-36 w-auto">
+                <img :src="prof.img2" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6">
+            </div>
+            <div class="flex items-center">
+                <img :src="prof.img3" alt="" class="border-2 border-Gris_Clair h-36 w-auto">
+                <img :src="prof.img4" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6">
+            </div>
+        </div>
+
+    </main>
 
 </template>
 
@@ -42,6 +74,7 @@ Note {{ prof.note }}
 
 <script>
 import Bouton from "/src/components/icones/bouton.vue";
+import Star from '/src/components/icones/star.vue';
 
 // Bibliothèque Firestore : import des fonctions
 import { 
@@ -80,6 +113,7 @@ export default {
     name:'MonCompte',
     components: {
         Bouton,
+        Star,
     },
     data() {
         return {

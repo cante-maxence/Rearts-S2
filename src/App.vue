@@ -24,6 +24,12 @@
             <RouterLink to="/Favoris" class="pt-2">
               Favoris
             </RouterLink>
+
+            <button class="mt-2"
+            @click="onDcnx()" >
+                Deconnexion
+            </button>
+
           </div>
         </div>
       </div>
@@ -221,6 +227,7 @@ export default {
     })
   },
   methods:{
+
     // Obtenir les informations du user connecté
     async getUserConnect(){
       await getAuth().onAuthStateChanged(function(user) { 
