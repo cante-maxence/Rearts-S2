@@ -157,7 +157,7 @@ import {
 } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
 
 // Fonction authentification
-import { getAuth } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
+import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
 
 // Import emetteur de main.js
 //import { emitter } from './main.js'
@@ -273,7 +273,29 @@ export default {
               console.log('erreur downloadUrl', error);
             })
         });
-      }
+      },
+
+      // Se deconnecter
+        onDcnx(){
+            // Se déconnecter
+            signOut(getAuth())
+            .then(response =>{
+                // Mise à jour du message
+console.log("user",this.user);  
+                this.message = "User non connecté";
+                // Ré initialisation des champs
+                this.user = {
+                    email:null,
+                    password:null
+                };
+                // Emission évènement de déconnexion
+                this.emitter.emit('deConnectUser', { user: this.user });
+            })
+
+            .catch(error=>{
+                console.log('erreur deconnexion ', error);
+            })
+        },
     } 
 }
 

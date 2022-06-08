@@ -35,19 +35,19 @@
         
         <div class="border-2 border-Gris_Clair px-3 pb-3 mt-6">
             <h3>Compétences</h3>
-            <div class="flex mt-2 items-center">
+            <div v-if="prof.comp1!==''" class="flex mt-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
                 <p>{{ prof.comp1 }}</p>
             </div>
-            <div class="flex mt-2 items-center">
+            <div v-if="prof.comp2!==''" class="flex mt-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
                 <p>{{ prof.comp2 }}</p>
             </div>
-            <div class="flex mt-2 items-center">
+            <div v-if="prof.comp3!==''" class="flex mt-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
                 <p>{{ prof.comp3 }}</p>
             </div>
-            <div class="flex mt-2 items-center">
+            <div v-if="prof.comp4!==''" class="flex mt-2 items-center">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic mr-2" width="30" height="30" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10s10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
                 <p>{{ prof.comp4 }}</p>
             </div>
