@@ -22,16 +22,18 @@
             Les tendances !
         </h3>
 
-        <div class="tendency py-3 w-full overflow-hidden">
-            <div><img src="/images-caroussel-hp/image1.jpg"></div>
-            <div><img src="/images-caroussel-hp/image2.jpg"></div>
-            <div><img src="/images-caroussel-hp/image3.jpg"></div>
-            <div><img src="/images-caroussel-hp/image4.jpg"></div>
-            <div><img src="/images-caroussel-hp/image5.jpg"></div>
-            <div><img src="/images-caroussel-hp/image6.jpg"></div>
-            <div><img src="/images-caroussel-hp/image7.jpg"></div>
-            <div><img src="/images-caroussel-hp/image8.jpg"></div>
-            <div><img src="/images-caroussel-hp/Rectangle9.jpg"></div>
+        <div class="py-3 w-full overflow-hidden">
+            <div class="tendency">
+                <div><img src="/images-caroussel-hp/image1.jpg"></div>
+                <div><img src="/images-caroussel-hp/image2.jpg"></div>
+                <div><img src="/images-caroussel-hp/image3.jpg"></div>
+                <div><img src="/images-caroussel-hp/image4.jpg"></div>
+                <div><img src="/images-caroussel-hp/image5.jpg"></div>
+                <div><img src="/images-caroussel-hp/image6.jpg"></div>
+                <div><img src="/images-caroussel-hp/image7.jpg"></div>
+                <div><img src="/images-caroussel-hp/image8.jpg"></div>
+                <div><img src="/images-caroussel-hp/Rectangle9.jpg"></div>
+            </div>
         </div>
 
         <div class="flex justify-end">
@@ -50,12 +52,14 @@
         </p>
 
         <!-- Contents -->
-        <div class="association py-3 w-full overflow-hidden">
-            <div><img class="h-40 w-40" src="/images-hp/Association1.jpg"></div>
-            <div><img class="h-40 w-40" src="/images-hp/Association2.jpg"></div>
-            <div><img class="h-40 w-40" src="/images-hp/Association3.jpg"></div>
-            <div><img class="h-40 w-40" src="/images-hp/Association4.jpg"></div>
-            <div><img class="h-40 w-40" src="/images-hp/Association5.jpg"></div>
+        <div class="py-3 w-full overflow-hidden">
+            <div class="association">
+                <div><img class="h-auto w-40" src="/images-hp/Association1.jpg"></div>
+                <div><img class="h-auto w-40" src="/images-hp/Association2.jpg"></div>
+                <div><img class="h-auto w-40" src="/images-hp/Association3.jpg"></div>
+                <div><img class="h-auto w-40" src="/images-hp/Association4.jpg"></div>
+                <div><img class="h-auto w-40" src="/images-hp/Association5.jpg"></div>
+            </div>
         </div>
 
         <div class="flex justify-end">
@@ -93,9 +97,14 @@ export default {
         Menu,
         Profil
     },
-    mounted: () => {
-        // Slider des tendances
-        tns({
+    data: () => {
+        return {
+            sliders: []
+        };
+    },
+    mounted() {
+        // Slider des tendency
+        const tendency = tns({
             container: '.tendency',
             loop: true,
             items: 1,
@@ -107,9 +116,10 @@ export default {
             controls: false,
             preventScrollOnTouch: 'auto'
         });
+        this.sliders.push(tendency);
 
         // Slider des associations
-        tns({
+        const associations = tns({
             container: '.association',
             loop: true,
             items: 2.5,
@@ -119,6 +129,10 @@ export default {
             controls: false,
             preventScrollOnTouch: 'auto'
         });
+        this.sliders.push(associations);
+    },
+    unmounted() {
+        this.sliders.forEach((s) => s.destroy());
     }
 };
 </script>

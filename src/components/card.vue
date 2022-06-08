@@ -1,5 +1,5 @@
 <template>
-    <div class="m-5 p-4 h-[465px] w-80 border-2 border-Gris_Clair">
+    <div class="my-5 p-4 h-[465px] w-80 border-2 border-Gris_Clair md:w-full">
         <router-link :to="link">
             <div>
                 <figure class="flex items-center">

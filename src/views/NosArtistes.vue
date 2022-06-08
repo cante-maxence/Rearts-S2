@@ -3,7 +3,8 @@
 
     <h2>Nos artistes !</h2>
 
-    <section class="flex-col object-center items-center grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]">
+    <!-- <section class="flex-col object-center items-center grid grid-flow-row-dense grid-cols-[repeat(auto-fit,minmax(350px,1fr))]"> -->
+    <section class="flex-col object-center items-center grid grid-flow-row-dense grid-cols-1 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
             <article v-for="artist in artists" :key="artist.id">
                 <card 
                     :imagep="artist.imagep"
