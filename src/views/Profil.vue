@@ -5,6 +5,11 @@
         Deconnexion
     </Bouton>
 
+<RouterLink to="/Messagerie"><Bouton>Me contacter !</Bouton></RouterLink>
+
+Note {{ prof.note }}
+
+
 <p>Nom d'Utilisateur</p>
 {{ prof.login }}
 <img :src="prof.avatar" alt="" class="rounded-full">
@@ -22,6 +27,13 @@
 {{ prof.comp4 }}
 </div>
 
+<div>
+    <h1>Services</h1>
+    <img :src="prof.img1" alt="" class="w-96">
+    <img :src="prof.img2" alt="" class="w-96">
+    <img :src="prof.img3" alt="" class="w-96">
+    <img :src="prof.img4" alt="" class="w-96">
+</div>
 
 </template>
 
@@ -116,12 +128,35 @@ export default {
             const storage = getStorage();
             // Référence de l'image du participant
             const spaceRef = ref(storage, 'users/'+this.prof.avatar);
-            
+            const spaceRef1 = ref(storage, 'img1/'+this.prof.img1);
+            const spaceRef2 = ref(storage, 'img2/'+this.prof.img2);
+            const spaceRef3 = ref(storage, 'img3/'+this.prof.img3);
+            const spaceRef4 = ref(storage, 'img4/'+this.prof.img4);
             // Récupération de l'url complète de l'image
             getDownloadURL(spaceRef)
                 .then((url) => {
                     // Mise à jour de l'image prévisualisée
                     this.prof.avatar = url;
+            })
+            getDownloadURL(spaceRef1)
+                .then((url) => {
+                    // Mise à jour de l'image prévisualisée
+                    this.prof.img1 = url;
+            })
+            getDownloadURL(spaceRef2)
+                .then((url) => {
+                    // Mise à jour de l'image prévisualisée
+                    this.prof.img2 = url;
+            })
+            getDownloadURL(spaceRef3)
+                .then((url) => {
+                    // Mise à jour de l'image prévisualisée
+                    this.prof.img3 = url;
+            })
+            getDownloadURL(spaceRef4)
+                .then((url) => {
+                    // Mise à jour de l'image prévisualisée
+                    this.prof.img4 = url;
             })
             .catch((error) =>{
                 console.log('erreur downloadUrl', error);
