@@ -1,8 +1,9 @@
 <template>
   <main>
-    <form @submit.prevent="onInscr">
+    <form @submit.prevent="onInscr()">
       <input v-model="user.email" type="email" placeholder="Adresse e-mail">
       <input v-model="user.password" type="password" placeholder="Mot de passe">
+      <input v-model="users.login" type="text" placeholder="Nom d'utilisateur (login)">
       <button type="submit">S'inscrire</button>
     </form>
   </main>
@@ -12,6 +13,30 @@
 
 
 <script>
+
+
+// Bibliothèque Firestore : import des fonctions
+import { 
+    getFirestore,   // Obtenir le Firestore
+    collection,     // Utiliser une collection de documents
+    doc,            // Obtenir un document par son id
+    getDoc,        // Obtenir un document d'une collection
+    addDoc,         // Ajouter un document à une collection
+    updateDoc,      // Mettre à jour un document dans une collection
+    deleteDoc,      // Supprimer un document d'une collection
+    onSnapshot,     // Demander une liste de documents d'une collection, en les synchronisant
+    query,          // Permet d'effectuer des requêtes sur Firestore
+    orderBy,        // Permet de demander le tri d'une requête query
+    where           // Permet de demander un filtrage pour une query
+    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+
+    // Cloud Storage : import des fonctions
+    import { 
+        getStorage,             // Obtenir le Cloud Storage
+        ref,                    // Pour créer une référence à un fichier à uploader
+        getDownloadURL         // Permet de récupérer l'adress complète d'un fichier du Storage
+    } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-storage.js'
+
 
 // Import des fonction d'authentification
 import { 
@@ -27,11 +52,25 @@ export default {
         return {
             user:{              // Utilisateur : email + mot de passe
                 email : '',
-                password : ''
+                password : '',
+                uid: ''
             },
+            users:{
+                avatar: '',
+                login: '',
+                uid:""
+            }
         }
   },
   methods: {
+
+    mounted(){
+            
+            this.user = user;
+            this.message = "Utilisateur connecté " + this.user.uid;
+   
+            },
+        
 
     onInscr() {
       createUserWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
@@ -45,6 +84,10 @@ export default {
           const errorMessage = error.message;
           // ..
         });
+
+      const db = getFirestore();
+      const docRef = addDoc(collection(db, 'users'), this.users);
+      // this.$router.push('/'); 
     }
   }
 }
