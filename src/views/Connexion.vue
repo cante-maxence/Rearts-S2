@@ -33,8 +33,6 @@ import {
     signOut                         // Se deconnecter
 } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
 
-//Import de l'emetteur depuis main.js
-//import { emitter } from '../main.js';
 
 export default {
     name:'MonCompte',
