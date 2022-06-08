@@ -5,7 +5,23 @@
         Deconnexion
     </Bouton>
 
-{{ this.userInfo }}
+<p>Nom d'Utilisateur</p>
+{{ prof.login }}
+<img :src="prof.avatar" alt="" class="rounded-full">
+
+<div>
+    <h1>Bio</h1>
+{{ prof.bio }}
+</div>
+
+<div>
+    <h1>Compétences</h1>
+{{ prof.comp1 }}
+{{ prof.comp2 }}
+{{ prof.comp3 }}
+{{ prof.comp4 }}
+</div>
+
 
 </template>
 
@@ -55,71 +71,66 @@ export default {
     },
     data() {
         return {
-            listeUsers:[],
-            userInfo:{
-                id:'',
-            },
-            user:null,              // Utilisateur : email + mot de passe
+            //listeProfil:[], // Liste des participants
+            user:{
+                    email:"",
+                    uid:""
+                },
+            message:null,
+            prof:{},
             
-            message:null,       // Message de connexion
-            // view:false,         // Afficher / cacher le mot de passe
-            // type:'password',    // Type de champs pour le password : password / text pour l'afficher
-            // imageData:null,     // Image prévisualisée pour création compte
         }
     },
-    mounted(){ // Montage de la vue
-        
-        // Appel de la liste des users (Firestore)
-        this.getUsers(); 
-    },
 
-    methods : { // Les fonctions
-        // obtenir les utilisateurs de users
-        async getUsers(){
-            // Obtenir les inofrmations du user connecté
-            await getAuth().onAuthStateChanged(function(user){
-                if(user){
-                    // Récupération du user connecté
-                    this.user = user;
-                }
-            }.bind(this))
-
-            // Informations des users de Firestore
-            const firestore = getFirestore();
-            // Collection users de Firestore
-            const dbUsers = collection(firestore, "users");
-            // Users triés sur leur login
-            const q = query(dbUsers, orderBy('login', 'asc'));
-            // Liste synchronisée
-            await onSnapshot(q, (snapshot) => {
-                this.listeUsers = snapshot.docs.map(doc => (
-                    {id:doc.id, ...doc.data()}
-                ))
-                // Récupération de l'url des avatars
-                this.listeUsers.forEach(function(user){
-                    // Obtenir le Cloud Storage
-                    const storage = getStorage();
-                    // Récupérer l'image par son nom de fichier
-                    const spaceRef = ref(storage, "users/"+user.avatar);
-                    // Récupération de l'url
-                    getDownloadURL(spaceRef)
-                    .then((url)=>{
-                        // Remplacer le nom du fichier par l'url
-                        user.avatar = url;
-                    })
-                    .catch((error)=>{
-                        console.log('erreur downloadurl',error);
-                    })
-                })
-
-                // Récupérer les infos complémentaires du user connecté
-                this.userInfo = this.listeUsers.filter(user => user.uid == this.user.uid);
-console.log("userInfo", this.userInfo);
-
-            })
+    mounted(){
+            let user = getAuth().currentUser;
+            if (user){
+                this.user = user;
+                this.message = "Utilisateur connecté " + this.user.uid;
+                this.getProfil(this.user.uid);
+            }else{
+                this.message = "Utilisateur non connecté";
+                
+            }
         },
 
-        
+    methods: {
+        async getProfil(id){
+            // Obtenir Firestore
+            const firestore = getFirestore();
+            // Base de données (collection)  document profil
+            // Récupération sur Firestore du profil via son id
+            const docRef = doc(firestore, "profil", id);
+            // Référence du profil concerné
+            this.refProfil = await getDoc(docRef);
+            // Test si le profil demandé existe
+            if(this.refProfil.exists()){
+                // Si oui on récupère ses données
+                this.prof = this.refProfil.data();
+                // Mémorisation photoActuelle
+            }else{
+                // Sinon simple message d'erreur
+                this.console.log("Participant inexistant");
+            }
+            // Obtenir le Storage
+            const storage = getStorage();
+            // Référence de l'image du participant
+            const spaceRef = ref(storage, 'users/'+this.prof.avatar);
+            
+            // Récupération de l'url complète de l'image
+            getDownloadURL(spaceRef)
+                .then((url) => {
+                    // Mise à jour de l'image prévisualisée
+                    this.prof.avatar = url;
+            })
+            .catch((error) =>{
+                console.log('erreur downloadUrl', error);
+            })
+
+            console.log(this.user)
+        },
+
+
         // Se deconnecter
         onDcnx(){
             // Se déconnecter
@@ -137,23 +148,24 @@ console.log("user",this.user);
                 // Emission évènement de déconnexion
                 this.emitter.emit('deConnectUser', { user: this.user });
             })
-
             .catch(error=>{
                 console.log('erreur deconnexion ', error);
             })
         },
-
         // Affiche/masque le champs password
         affiche(){
             this.view = !this.view;
             if(this.view)   {this.type = 'text'; }
             else            {this.type = 'password'; }
         },
-
      
             
         },
-
     }
+
+
+    
+
+
 
 </script>
