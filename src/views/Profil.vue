@@ -158,7 +158,7 @@ export default {
                 // Mémorisation photoActuelle
             }else{
                 // Sinon simple message d'erreur
-                this.console.log("Participant inexistant");
+            ///    this.console.log("Participant inexistant");
             }
             // Obtenir le Storage
             const storage = getStorage();
@@ -194,11 +194,11 @@ export default {
                     // Mise à jour de l'image prévisualisée
                     this.prof.img4 = url;
             })
-            .catch((error) =>{
-                console.log('erreur downloadUrl', error);
-            })
+            // .catch((error) =>{
+            //     console.log('erreur downloadUrl', error);
+            // })
 
-            console.log(this.user)
+//              console.log(this.user)
         },
 
 
@@ -208,7 +208,7 @@ export default {
             signOut(getAuth())
             .then(response =>{
                 // Mise à jour du message
-console.log("user",this.user);  
+//console.log("user",this.user);  
                 this.message = "User non connecté";
                 this.$router.push('/Connexion')
                 // Ré initialisation des champs
@@ -219,9 +219,9 @@ console.log("user",this.user);
                 // Emission évènement de déconnexion
                 this.emitter.emit('deConnectUser', { user: this.user });
             })
-            .catch(error=>{
-                console.log('erreur deconnexion ', error);
-            })
+            // .catch(error=>{
+            //     console.log('erreur deconnexion ', error);
+            // })
         },
         // Affiche/masque le champs password
         affiche(){

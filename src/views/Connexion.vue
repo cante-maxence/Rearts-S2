@@ -66,7 +66,7 @@ export default {
                 this.user = response.user;
                 // Emission evenement de connexion
                 this.emitter.emit('connectUser', { user: this.user });
-console.log("user",this.user);                
+//console.log("user",this.user);                
                 // Mise à jour du message
                 this.message = "User connecté : "+this.user.email;
                 this.$router.push('/');
@@ -84,7 +84,7 @@ console.log("user",this.user);
             signOut(getAuth())
             .then(response =>{
                 // Mise à jour du message
-console.log("user",this.user);  
+//console.log("user",this.user);  
                 this.message = "User non connecté";
                 // Ré initialisation des champs
                 this.user = {
@@ -95,9 +95,9 @@ console.log("user",this.user);
                 this.emitter.emit('deConnectUser', { user: this.user });
             })
 
-            .catch(error=>{
-                console.log('erreur deconnexion ', error);
-            })
+            // .catch(error=>{
+            //     console.log('erreur deconnexion ', error);
+            // })
         },
 
         // Affiche/masque le champs password

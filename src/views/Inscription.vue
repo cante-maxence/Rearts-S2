@@ -115,7 +115,7 @@ export default {
 
       const db = getFirestore();
       const docRef = addDoc(collection(db, 'profil'), this.profil);
-      // this.$router.push('/'); 
+       this.$router.push('/'); 
     }
   }
 }

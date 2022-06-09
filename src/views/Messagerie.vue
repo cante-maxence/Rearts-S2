@@ -1,5 +1,5 @@
 <template>
-    <div class="container ">  
+    <div class="container mb-56">  
 
         <div class="card-header">
             <h2 class="">Messagerie</h2>
@@ -16,7 +16,7 @@
                 <div class="">
                     <p class="">Utilisateurs</p>
                 </div>
-                <select class="custom-select w-72 p-3 my-3" v-model="userSelected" @change="selectUser">
+                <select class="custom-select w-72 p-3 my-3 border-2 rounded-lg border-Gris_Clair" v-model="userSelected" @change="selectUser">
                     <option selected disabled value="">...</option>
                     <option
                         v-for="util in listeUsers" :key="util.uid"
@@ -270,9 +270,9 @@ export default {
                         // Remplacer le nom du fichier par l'url
                         user.avatar = url;
                     })
-                    .catch((error)=>{
-                        console.log('erreur downloadurl',error);
-                    })
+                    // .catch((error)=>{
+                    //     console.log('erreur downloadurl',error);
+                    // })
                 })
 
                 // Récupérer les infos complémentaires du user connecté
