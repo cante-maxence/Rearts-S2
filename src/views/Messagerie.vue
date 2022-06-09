@@ -30,9 +30,9 @@
                             <span class="input-group-text">Nouveau fil avec {{userSelected.login}}</span>
                         </div>
                         <input type="text" class="form-control" v-model="libelle" required />
-                        <button type="submit" title="Création">
+                        <Bouton type="submit" title="Création">
                             Créer
-                        </button>
+                        </Bouton>
                     </div>
                 </form>
 
@@ -48,12 +48,12 @@
                                     le  {{dateFr(disc.creation)}}
                                 </td>
                                 <td>
-                                    <button class="btn btn-light mr-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
+                                    <Bouton class="mr-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
                                         Voir ce fil
-                                    </button>
-                                    <button class="btn btn-light" type="button" @click="deleteFil(disc)" title="Supprimer ce fil">
+                                    </Bouton>
+                                    <Bouton class="" type="button" @click="deleteFil(disc)" title="Supprimer ce fil">
                                         Supprimer ce fil
-                                    </button>
+                                    </Bouton>
                                 </td>
                             </tr>
                         </tbody>
@@ -76,9 +76,9 @@
                             v-model="message"
                         ></textarea>
                         <div class="input-group-prepend">
-                            <button class="btn btn-dark" @click="sendMsg()">
+                            <Bouton class="" @click="sendMsg()">
                             Envoyer
-                            </button>
+                            </Bouton>
                         </div>
                     </div>
 
@@ -133,6 +133,8 @@
 </template>
 
 <script>
+import Bouton from "/src/components/icones/bouton.vue";
+
 // Bibliothèque Firestore : import des fonctions
 import { 
     getFirestore,   // Obtenir le Firestore
@@ -178,6 +180,13 @@ export default {
 
         }
     },
+
+    components: { 
+        Bouton,
+    },
+
+
+
     mounted(){ // Montage de la vue
         // Appel de la liste des users (Firestore)
         this.getUsers(); 
