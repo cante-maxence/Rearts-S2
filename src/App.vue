@@ -100,7 +100,9 @@
         <span class="font-comfortaa font-normal text-lg ">Nous rejoindre</span>
       <div>
         <Facebook class="fill-blanc-primary inline-block m-3 mx-3"></Facebook>
-        <Instagram class="fill-blanc-primary inline-block m-3 mx-3"></Instagram>
+        <a href="https://www.instagram.com/rearts_fr/">
+          <Instagram class="fill-blanc-primary inline-block m-3 mx-3"></Instagram>
+        </a>
         <Youtube class="fill-blanc-primary inline-block m-3 mx-3"></Youtube>
       </div>
         <Bouton class=" m-3">

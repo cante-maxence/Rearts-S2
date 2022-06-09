@@ -14,14 +14,18 @@
         <div v-else>        
             <div class="mb-3">
                 <div class="">
-                    <p class="" >Utilisateur</p>
+                    <p class="">Utilisateurs</p>
                 </div>
-                <select class="custom-select" v-model="userSelected" @change="selectUser">
+                <select class="custom-select w-72 p-3 my-3" v-model="userSelected" @change="selectUser">
                     <option selected disabled value="">...</option>
                     <option
                         v-for="util in listeUsers" :key="util.uid"
                         :value="util"
-                    >{{util.login}}</option>
+                    >
+                    <p class="">
+                       {{util.login}} 
+                    </p>
+                    </option>
                 </select>
             </div>
 
@@ -40,17 +44,38 @@
                     </div>
                 </form>
 
-                <h3>Vos fils de discussion avec : {{userSelected.login}}</h3>
+                <h3 class="mt-5">Vos fils de discussion avec : {{userSelected.login}}</h3>
                 <div v-if="chat.length > 0"> 
                     <table class="table text-light">
                         <tbody>
+            
                             <tr v-for="disc in chat" :key="disc.uid">
+                            <div class="flex">
                                 <td>
-                                    {{disc.libelle}} - créer par 
-                                    <p v-if="disc.fil[0] == user.uid">vous</p>
+                                    <p class="underline">
+                                        {{disc.libelle}} 
+                                    </p>   
+                                <div class="flex">
+                                    <p>
+                                        - créé par 
+                                    </p>    
+                                    <p class="underline mx-1" v-if="disc.fil[0] == user.uid">
+                                        vous
+                                    </p>
                                     <p v-else>{{userSelected.login}}</p>
-                                    le  {{dateFr(disc.creation)}}
+                                </div>
+                                <div class="flex">
+                                    <p>
+                                        le 
+                                    </p>
+                                    <p class="underline mx-1">
+                                        {{dateFr(disc.creation)}}
+                                    </p>
+                                </div>
                                 </td>
+                            </div>
+
+                            <div class="flex mb-5">
                                 <td>
                                     <Bouton class="mr-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3z"></path></svg>
@@ -59,6 +84,8 @@
                                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ion" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"></path><path fill="currentColor" d="M432 96h-96V72a40 40 0 0 0-40-40h-80a40 40 0 0 0-40 40v24H80a16 16 0 0 0 0 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 0 0 0-32ZM192.57 416H192a16 16 0 0 1-16-15.43l-8-224a16 16 0 1 1 32-1.14l8 224A16 16 0 0 1 192.57 416ZM272 400a16 16 0 0 1-32 0V176a16 16 0 0 1 32 0Zm32-304h-96V72a7.91 7.91 0 0 1 8-8h80a7.91 7.91 0 0 1 8 8Zm32 304.57A16 16 0 0 1 320 416h-.58A16 16 0 0 1 304 399.43l8-224a16 16 0 1 1 32 1.14Z"></path></svg>
                                     </Bouton>
                                 </td>
+                            </div>
+
                             </tr>
                         </tbody>
                     </table>
