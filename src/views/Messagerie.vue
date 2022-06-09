@@ -1,19 +1,20 @@
 <template>
-    <div class="container bg-gray-400">  
+    <div class="container ">  
 
         <div class="card-header">
-            <h5 style="color:white;">Chat</h5>
+            <h2 class="">Messagerie</h2>
         </div>    
 
         <div v-if="user == null">
-            <h6 class="alert alert-warning text-center" role="alert">
+            <h3 class="alert alert-warning text-center text-Rouge" role="alert">
                 Vous devez être connecté pour utiliser le Chat !!
-            </h6>
+            </h3>
         </div>
+
         <div v-else>        
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text" >Sélectionner un utilisateur</span>
+            <div class="mb-3">
+                <div class="">
+                    <p class="" >Utilisateur</p>
                 </div>
                 <select class="custom-select" v-model="userSelected" @change="selectUser">
                     <option selected disabled value="">...</option>
@@ -23,36 +24,37 @@
                     >{{util.login}}</option>
                 </select>
             </div>
+
             <div v-if="userSelected != null"> 
                 <form class="mb-3" @submit.prevent="createDisc()">
                     <div class="input-group">
                         <div class="input-group-prepend">
-                            <span class="input-group-text">Nouveau fil avec {{userSelected.login}}</span>
+                            <p class="input-group-text">Nouveau fil avec {{userSelected.login}}</p>
                         </div>
                         <input type="text" class="form-control" v-model="libelle" required />
                         <Bouton type="submit" title="Création">
-                            Créer
-                        </Bouton>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fluent" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28"><path fill="currentColor" d="M6.25 4.5A1.75 1.75 0 0 0 4.5 6.25v15.5A1.75 1.75 0 0 0 6 23.482V16.25A2.25 2.25 0 0 1 8.25 14h11.5A2.25 2.25 0 0 1 22 16.25v7.232a1.75 1.75 0 0 0 1.5-1.732V8.786c0-.465-.184-.91-.513-1.238l-2.535-2.535a1.75 1.75 0 0 0-1.238-.513H19v4.25A2.25 2.25 0 0 1 16.75 11h-6.5A2.25 2.25 0 0 1 8 8.75V4.5H6.25Zm3.25 0v4.25c0 .414.336.75.75.75h6.5a.75.75 0 0 0 .75-.75V4.5h-8Zm11 19v-7.25a.75.75 0 0 0-.75-.75H8.25a.75.75 0 0 0-.75.75v7.25h13ZM3 6.25A3.25 3.25 0 0 1 6.25 3h12.965a3.25 3.25 0 0 1 2.298.952l2.535 2.535c.61.61.952 1.437.952 2.299V21.75A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25Z"></path></svg>
+                        </Bouton> 
                     </div>
                 </form>
 
-                <h5>Vos fils de discussion avec : {{userSelected.login}}</h5>
+                <h3>Vos fils de discussion avec : {{userSelected.login}}</h3>
                 <div v-if="chat.length > 0"> 
                     <table class="table text-light">
                         <tbody>
                             <tr v-for="disc in chat" :key="disc.uid">
                                 <td>
                                     {{disc.libelle}} - créer par 
-                                    <span v-if="disc.fil[0] == user.uid">vous</span>
-                                    <span v-else>{{userSelected.login}}</span>
+                                    <p v-if="disc.fil[0] == user.uid">vous</p>
+                                    <p v-else>{{userSelected.login}}</p>
                                     le  {{dateFr(disc.creation)}}
                                 </td>
                                 <td>
                                     <Bouton class="mr-3" type="button" @click="viewFil(disc)" title="Voir ce fil">
-                                        Voir ce fil
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ic" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5s5 2.24 5 5s-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3s3-1.34 3-3s-1.34-3-3-3z"></path></svg>
                                     </Bouton>
                                     <Bouton class="" type="button" @click="deleteFil(disc)" title="Supprimer ce fil">
-                                        Supprimer ce fil
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--ion" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"><path fill="none" d="M296 64h-80a7.91 7.91 0 0 0-8 8v24h96V72a7.91 7.91 0 0 0-8-8Z"></path><path fill="currentColor" d="M432 96h-96V72a40 40 0 0 0-40-40h-80a40 40 0 0 0-40 40v24H80a16 16 0 0 0 0 32h17l19 304.92c1.42 26.85 22 47.08 48 47.08h184c26.13 0 46.3-19.78 48-47l19-305h17a16 16 0 0 0 0-32ZM192.57 416H192a16 16 0 0 1-16-15.43l-8-224a16 16 0 1 1 32-1.14l8 224A16 16 0 0 1 192.57 416ZM272 400a16 16 0 0 1-32 0V176a16 16 0 0 1 32 0Zm32-304h-96V72a7.91 7.91 0 0 1 8-8h80a7.91 7.91 0 0 1 8 8Zm32 304.57A16 16 0 0 1 320 416h-.58A16 16 0 0 1 304 399.43l8-224a16 16 0 1 1 32 1.14Z"></path></svg>
                                     </Bouton>
                                 </td>
                             </tr>
@@ -65,60 +67,73 @@
                 </div>
 
 
-                <hr style="background-color:white;" />
+                <hr class="h-2 my-3" />
 
                 <div v-if="discussion != null"> 
-                    <h5>Discussion : {{discussion.libelle}}</h5>
-                    <hr/>
-                    <div class="input-group mb-3">
-                        <textarea class="form-control msg" rows="3" 
+                <div class="flex">
+                    <img  class="avatar h-10 rounded-full mr-4" :src="userSelected.avatar"/>
+                    <h3>{{discussion.libelle}}</h3>
+                </div>
+
+                <hr class="h-2 my-3" />
+
+                    <div class="flex mb-3 items-end object-center justify-center">
+                        <textarea class="bg-Gris_Clair rounded-xl px-4 py-2" rows="3" 
                             placeholder="Message" 
                             v-model="message"
                         ></textarea>
-                        <div class="input-group-prepend">
-                            <Bouton class="" @click="sendMsg()">
-                            Envoyer
+                        <div class="input-group-prepend ">
+                            <Bouton class="ml-2" @click="sendMsg()">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--fluent" width="23" height="23" preserveAspectRatio="xMidYMid meet" viewBox="0 0 28 28"><path fill="currentColor" d="M3.79 2.773L24.86 12.85a1.25 1.25 0 0 1 0 2.256L3.79 25.183a1.25 1.25 0 0 1-1.746-1.456l2.108-7.728a.5.5 0 0 1 .415-.364l10.21-1.387a.25.25 0 0 0 .195-.15l.018-.062a.25.25 0 0 0-.157-.268l-.055-.015l-10.2-1.387a.5.5 0 0 1-.414-.364L2.044 4.23A1.25 1.25 0 0 1 3.79 2.773Z"></path></svg>
                             </Bouton>
                         </div>
                     </div>
 
                     <div v-for="disc in chat" :key="disc.id">
 
-                        <div v-if="disc.id == discussion.id"> 
+                        <div class="" v-if="disc.id == discussion.id"> 
 
-                            <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
+                            <div class="mx-4" v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
 
-                                <div class="row mb-3" v-if="msg.by == user.uid">
+                                <div class="row mb-8" v-if="msg.by == user.uid">
                                     <div class="col-4" >
-                                        <div class="text-left ml-3">
-                                            <img  class="avatar h-10" :src="userInfo[0].avatar" />
-                                            {{userInfo[0].login}}  - {{dateFr(msg.date)}}
+                                        <div class="flex items-center justify-end">
+                                            <h3>
+                                                {{userInfo[0].login}}  - {{dateFr(msg.date)}}
+                                            </h3>
+                                            <img  class="h-10 rounded-full ml-3" :src="userInfo[0].avatar" />
                                         </div>
                                     </div>
-                                    <div class="col-8 text-center mb-1"> 
-                                        <div class="recep">                        
+
+                                    <div class="col-8 text-center mb-1 mx-2 grid grid-cols-2"> 
+                                        <div></div>
+                                        <div class="bg-red_message rounded-xl p-3 my-3">                        
                                             <p>{{msg.contenu}}</p>
                                         </div>                    
                                     </div>
                                 </div>
 
-                                <div class="row mb-3" v-if="msg.by == userSelected.uid">            
-                                    <div class="col-8 text-center"> 
-                                        <div class="w-70 emet" >                        
+
+
+                                <div class="row mb-8" v-if="msg.by == userSelected.uid">            
+                                    
+                                    <div class="col-4">
+                                        <div class="flex items-center">
+                                                <img  class="h-10 rounded-full mr-3" :src="userSelected.avatar"/>
+                                                <h3>
+                                                    {{userSelected.login}} - {{dateFr(msg.date)}}
+                                                </h3>
+                                            </div>
+                                    </div>
+
+                                    <div class="col-8 text-center mb-1 mx-2 grid grid-cols-2"> 
+                                        <div class="w-70 bg-grey_message rounded-xl col-start-1 p-3  my-3" >                        
                                             <p>{{msg.contenu}}</p>
                                         </div>                    
-                                    </div>
-                                    <div class="col-4">
-                                        <div class="text-left ml-3">
-                                                <img  class="avatar h-10" :src="userSelected.avatar"/>
-                                                {{userSelected.login}} - {{dateFr(msg.date)}}
-                                            </div>
                                     </div>
                                 </div>
                             
                             </div>
-                        
-                        
                         
                         
                         </div>
@@ -162,6 +177,9 @@ import { getAuth } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.
 
 export default {
     name:'ChatView',
+    components: { 
+        Bouton,
+    },
     data() { // Les données
         return {
             user:null,                  // User connecté
@@ -181,9 +199,6 @@ export default {
         }
     },
 
-    components: { 
-        Bouton,
-    },
 
 
 

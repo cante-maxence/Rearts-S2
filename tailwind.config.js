@@ -12,7 +12,9 @@ module.exports = {
         "Gris_Francanglais": "#f9f9f9",
         "Rouge": "#a40b0b",
         "star-color": "#dbde4c",
-        "ClearRed": "#c41313"
+        "ClearRed": "#c41313",
+        "red_message": "#f5dcdc",
+        "grey_message": "#e4e4e4"
       },
       "fontSize": {
         "sm": "0.625rem",

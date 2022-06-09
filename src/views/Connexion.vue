@@ -10,7 +10,7 @@
                     v-model="user.email" required />                    
                     
                 <input 
-                    class="form-control my-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Mot de passe" 
+                    class="form-control my-3 ml-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Mot de passe" 
                     :type="type" v-model="user.password" required
                     />
             </div>                    
