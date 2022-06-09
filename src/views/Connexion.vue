@@ -1,21 +1,21 @@
 <template>
-    <main class="mb-16">
+    <main class="mb-32 min-h-full">
 
         <h2>Connecte toi !</h2>
 
-        <form @submit.prevent="onCnx">
+        <form class="text-center" @submit.prevent="onCnx">
             <div>
                 <input 
-                    class="form-control my-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Adresse mail" type="email"
+                    class="form-control my-3 p-2 border-2 rounded-lg border-Gris_Clair" placeholder="Adresse mail" type="email"
                     v-model="user.email" required />                    
                     
                 <input 
-                    class="form-control my-3 ml-3 p-1 border-2 rounded-lg border-Gris_Clair" placeholder="Mot de passe" 
+                    class="form-control my-3 p-2 border-2 rounded-lg border-Gris_Clair" placeholder="Mot de passe" 
                     :type="type" v-model="user.password" required
                     />
             </div>                    
                             
-            <div class="my-3 p-1">   
+            <div class="my-3 p-1 flex justify-center">   
                 <Bouton type="submit" class="float-left btn btn-dark" >
                     Connexion
                 </Bouton>

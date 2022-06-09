@@ -1,10 +1,16 @@
 <template>
   <main>
-    <form @submit.prevent="onInscr()">
-      <input v-model="user.email" type="email" placeholder="Adresse e-mail">
-      <input v-model="user.password" type="password" placeholder="Mot de passe">
-      <input v-model="profil.login" type="text" placeholder="Nom d'utilisateur (login)">
-      <button type="submit">S'inscrire</button>
+    <form class="text-center mb-32" @submit.prevent="onInscr()">
+      <input class="border-2 border-Gris_Clair p-2 m-3  rounded-lg" v-model="user.email" type="email" placeholder="Adresse e-mail">
+      <input class="border-2 border-Gris_Clair p-2 m-3  rounded-lg" v-model="user.password" type="password" placeholder="Mot de passe">
+      <input class="border-2 border-Gris_Clair p-2 m-3  rounded-lg" v-model="profil.login" type="text" placeholder="Nom d'utilisateur (login)">
+
+      <div class="flex justify-center">
+        <Bouton class="mx-3 my-3" type="submit">
+          <slot>S'inscrire</slot>
+        </Bouton>
+      </div>
+
     </form>
   </main>
 </template>
@@ -13,7 +19,7 @@
 
 
 <script>
-
+import Bouton from "/src/components/icones/bouton.vue";
 
 // Bibliothèque Firestore : import des fonctions
 import { 
@@ -73,6 +79,12 @@ export default {
             }
         }
   },
+
+  components: { 
+      Bouton,
+  },
+
+
   methods: {
 
     mounted(){
