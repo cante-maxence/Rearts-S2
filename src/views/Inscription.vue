@@ -1,5 +1,8 @@
 <template>
   <main>
+    <h2>
+      Inscription
+    </h2>
     <form class="text-center mb-32" @submit.prevent="onInscr()">
       <input class="border-2 border-Gris_Clair p-2 m-3  rounded-lg" v-model="user.email" type="email" placeholder="Adresse e-mail">
       <input class="border-2 border-Gris_Clair p-2 m-3  rounded-lg" v-model="user.password" type="password" placeholder="Mot de passe">
