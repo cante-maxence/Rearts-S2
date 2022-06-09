@@ -283,6 +283,7 @@ export default {
                 // Mise à jour du message
 console.log("user",this.user);  
                 this.message = "User non connecté";
+                this.$router.push('/Connexion')
                 // Ré initialisation des champs
                 this.user = {
                     email:null,
@@ -291,7 +292,6 @@ console.log("user",this.user);
                 // Emission évènement de déconnexion
                 this.emitter.emit('deConnectUser', { user: this.user });
             })
-
             .catch(error=>{
                 console.log('erreur deconnexion ', error);
             })

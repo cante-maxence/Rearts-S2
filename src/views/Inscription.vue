@@ -3,7 +3,7 @@
     <form @submit.prevent="onInscr()">
       <input v-model="user.email" type="email" placeholder="Adresse e-mail">
       <input v-model="user.password" type="password" placeholder="Mot de passe">
-      <input v-model="users.login" type="text" placeholder="Nom d'utilisateur (login)">
+      <input v-model="profil.login" type="text" placeholder="Nom d'utilisateur (login)">
       <button type="submit">S'inscrire</button>
     </form>
   </main>
@@ -55,9 +55,20 @@ export default {
                 password : '',
                 uid: ''
             },
-            users:{
+            profil:{
                 avatar: '',
+                admin: '',
+                bio: '',
                 login: '',
+                comp1: '',
+                comp2: '',
+                comp3: '',
+                comp4: '',
+                img1: '',
+                img2: '',
+                img3: '',
+                img4: '',
+                note: '',
                 uid:""
             }
         }
@@ -86,7 +97,7 @@ export default {
         });
 
       const db = getFirestore();
-      const docRef = addDoc(collection(db, 'users'), this.users);
+      const docRef = addDoc(collection(db, 'profil'), this.profil);
       // this.$router.push('/'); 
     }
   }
