@@ -88,6 +88,8 @@ export default {
         .then((userCredential) => {
           // Signed in 
           const user = userCredential.user;
+          // const db = getFirestore();
+          // const docRef = addDoc(collection(db, 'profil').doc(user.uid), this.profil)
           // ...
         })
         .catch((error) => {

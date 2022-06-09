@@ -56,12 +56,12 @@
         <div class="border-2 border-Gris_Clair px-3 pb-3 mt-6">
             <h3>Services</h3>
             <div class="flex items-center">
-                <img :src="prof.img1" alt="" class="border-2 border-Gris_Clair h-36 w-auto">
-                <img :src="prof.img2" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6">
+                <div v-if="prof.img1!==''" ><img :src="prof.img1" alt="" class="border-2 border-Gris_Clair h-36 w-auto"></div>
+                <div v-if="prof.img2!==''" ><img :src="prof.img2" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6"></div>
             </div>
             <div class="flex items-center">
-                <img :src="prof.img3" alt="" class="border-2 border-Gris_Clair h-36 w-auto">
-                <img :src="prof.img4" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6">
+                <div v-if="prof.img3!==''" ><img :src="prof.img3" alt="" class="border-2 border-Gris_Clair h-36 w-auto"></div>
+                <div v-if="prof.img4!==''" ><img :src="prof.img4" alt="" class="border-2 border-Gris_Clair h-28 w-auto m-6"></div>
             </div>
         </div>
 

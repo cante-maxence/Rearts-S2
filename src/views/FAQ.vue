@@ -2,75 +2,20 @@
         <h2>FAQ</h2>
 
         <div class="">
+            <input v-model='filter' type="search" class="border-black border-2">
             <p>
                 Questions les plus récurentes
             </p>
 
-            <h3>
-                Comment trouver des artistes ?
-            </h3>
+            <div v-for='faq in filterByName' :key='faq.id'>
+                <div>
+                    <h3>{{ faq.question }}</h3>
+                </div>
 
-            <p>
-                Parcourir le fil d’actu, qui affiche les artistes. 
-                Tu y verras différents types d’artistes. N’hésite pas à le personnaliser pour faire apparaître des artistes étant spécialisés dans un domaine.
-            </p>
-            <br>
-
-            <p>
-                Utiliser la barre de recherche si tu sais précisément qui tu cherches.
-            </p>
-
-            <h3>
-                Acheter, étapes par étapes
-            </h3>
-
-            <h3>              
-                1. Trouve un artiste
-            </h3>
-
-            <p>
-                Parcours le “cathalogue” pour trouver un artiste qui t’intéresse.
-            </p>
-
-            <h3>              
-                2. Contacte l’artiste
-            </h3>
-
-            <p>
-                Appuie sur “Contacter” où directement sur “Acheter”.
-            </p>
-
-            <p>
-                Veille à utiliser notre messagerie sécurisée : ne déplace jamais la conversation hors de Réarts.
-            </p>
-
-            <p>
-                Consulte les évaluations précédentes. Regarde ce que d’autres membres ont dit à propos de leurs achats.
-            </p>
-
-            <h3>              
-                3. Paie ton service
-            </h3>
-
-            <p>
-                Pour régler l’article choisi, appuie sur le bouton Acheter de l’annonce du service.
-            </p>
-
-            <p>
-                Lors du paiement : <br>
-                Saisis ton adresse et ton numéro de téléphone (si cela t’est demandé). Vérifie bien que les informations saisies soient correctes.
-                Sélectionne la méthode de paiement que tu préfères. <br>
-                Choisis un lieu de livraison. <br>
-                Appuie sur Payer pour confirmer ta commande.
-            </p>
-
-            <h3>              
-                4. Réceptionne ton achat
-            </h3>
-
-            <p>
-                En fonction du service proposé, tu receveras ton service avant ou à la date précise. Exeception si le service ce fait envoyer physiquement.
-            </p>
+                <div>
+                    <p>{{ faq.reponse }}</p>
+                </div>
+            </div>
         </div>
 
 
@@ -120,9 +65,70 @@
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/vue/outline";
 
 
-export default {
-  components: { ChevronLeftIcon, ChevronRightIcon },
 
-}
+import {
+    getFirestore,
+    collection,
+    doc,
+    getDocs,
+    addDoc,
+    updateDoc,
+    deleteDoc,
+    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+
+    export default {
+      components:{
+        ChevronLeftIcon, ChevronRightIcon
+        },
+      
+
+        data(){
+            return{
+                nom:null,
+                listeFaqSynchro:[],
+                filter:''
+            }
+        },
+
+        computed:{
+          orderByName:function(){
+            return this.listeFaqSynchro.sort(function(a, b){
+              if(a.nom < b.nom) return -1;
+              if(a.nom > b.nom) return 1;
+              return 0;
+            })
+          },
+
+          filterByName:function(){
+            if(this.filter.length > 0){
+              let filter = this.filter.toLowerCase();
+              return this.orderByName.filter(function(faq){
+                return faq.question.toLowerCase().includes(filter);
+              })
+            }else{
+              return this.orderByName;
+            }
+          }
+        },
+
+
+        mounted(){
+            this.getFaqSynchro();
+        },
+
+        methods:{
+            async getFaqSynchro(){
+                const firestore = getFirestore();
+                const dbFaq= collection(firestore, "faq");
+                const query = await onSnapshot(dbFaq, (snapshot) =>{
+                    this.listeFaqSynchro = snapshot.docs.map(doc => ({id:doc.id, ...doc.data()}));
+                })
+            },
+
+            
+        }
+      
+    }
+
 
 </script>
